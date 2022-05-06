@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MyMusicProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -189,12 +190,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\content.css" />
     <Content Include="Content\css\footer.css" />
     <Content Include="Content\css\header.css" />
     <Content Include="Content\css\trangchu.css" />
+    <Content Include="Content\images\avatar.jpg" />
     <Content Include="Content\images\JK1.jpg" />
     <Content Include="Content\images\JK2.jpg" />
     <Content Include="Content\images\JK3.jpg" />
+    <Content Include="Content\images\maxresdefault.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -248,6 +252,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Header\header.cshtml" />
     <Content Include="Views\Footer\footer.cshtml" />
+    <Content Include="Views\MyMusicProfile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
