@@ -1,0 +1,52 @@
+/*Title Hello*/
+section {
+    display: block;
+}
+.dau1 {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.caidau {
+    padding: inherit;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+/*Load Video*/
+.dau2 {
+    margin-top: 40px;
+}
+
+.h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.f8d0pxd {
+    float: left;
+    margin-right: 10px;
+}
+
+.sbgigcn {
+    border-radius: 4px;
+}
+
+.p18r570z {
+    display: block;
+    height: 0;
+    padding-top: var(--p18r570z-0);
+    position: relative;
+    width: var(--p18r570z-1);
+}
+
+

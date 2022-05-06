@@ -1,0 +1,37 @@
+﻿<div id="header">
+    <div class="main_name">
+        <a href="~/Home/Index" class="home">
+
+            <i class="icon-logo" title="Về Trang Chủ">NVD</i>
+        </a>
+    </div>
+    <div class="search">
+
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <input type="search" id="search" placeholder="Search Any Song.." title="Tìm kiếm" />
+    </div>
+    <div class="upload">
+        <buton class="upload_btn">
+            <i class="fa fa-upload" title="Up bài của bạn"> upload song </i>
+        </buton>
+    </div>
+    <nav id="nav">
+        <a href="#" title="Bản cover">discover</a>
+        <a href="#" style="margin: 12px;" title="Trang Cá Nhân">my music profile</a>
+        <a href="#" title="Xem Thêm">more</a>
+    </nav>
+
+    @*<ul class="account">
+        <li>
+            <a href="#">
+                Đăng ký
+            </a>
+        </li>
+        <li><a href="#">Đăng nhập</a></li>
+    </ul>*@
+    @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")  
+</div>
+<div class="clear"></div>
+
+<style>
+</style>

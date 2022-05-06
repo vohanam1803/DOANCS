@@ -1,0 +1,47 @@
+﻿<body>
+    @using Microsoft.AspNet.Identity
+    <section class="dau1">
+        <header>
+            <div class="caidau">
+                <h1 class="caichu">
+                    <span class="chudau">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">@Html.ActionLink("Xin Chào " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Bạn đã có tài khoản?" }),</font>
+                        </font>
+                    </span>
+                    
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;"> bạn cảm thấy được truyền cảm hứng?</font>
+                    </font>
+                </h1>
+            </div>
+        </header>
+    </section>
+
+    <div class="dau2">
+
+        <div class="khung" style="background: wheat; box-shadow: 0 0 7px rgb(0 0 0 / 20%); padding: 5px; position: relative; margin-left: 50px; margin-right: 50px;">
+
+            <div class="tieude" style=" padding: 10px 5px;">
+                <h2 class="chutieude" style="color: brown; margin: 0; font-weight: 700;">YOUR SONG</h2>
+            </div>
+            <div class="video" style="background-color: darkgrey;">
+                <div class="assg" style=" flex: 1 1 auto; min-width: 0;">
+                    <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px; --p18r570z-1:80px;"><img src="https://img.youtube.com/vi/xK_9pfj35jM/mqdefault.jpg" alt="[Vietsub+Kara] Đông miên (Ngủ đông) - Tư Nam| 冬眠 - 司南| Nhạc Hoa tâm trạng| Nhạc hot Tik tok chords" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0: transparent; --iwzmvkf-1: 0; --i1by9jdf-0: #FFFFFF; height: 80px;"></picture>
+                </div>
+            </div>
+            <div class="video" style="background-color: darkgrey;">
+                <div class="assg" style=" flex: 1 1 auto; min-width: 0;">
+                    <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px; --p18r570z-1:80px;"><img src="https://img.youtube.com/vi/xK_9pfj35jM/mqdefault.jpg" alt="[Vietsub+Kara] Đông miên (Ngủ đông) - Tư Nam| 冬眠 - 司南| Nhạc Hoa tâm trạng| Nhạc hot Tik tok chords" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0: transparent; --iwzmvkf-1: 0; --i1by9jdf-0: #FFFFFF; height: 80px;"></picture>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        function name() {
+            var userName = '@HttpContext.Current.User.Identity.Name';
+        }
+    </script>
+</body>

@@ -1,0 +1,8 @@
+-Down Bài Về: Nếu chưa có source
+git clone link
+-Push bài lên: đưa bài mình làm lên
+git add .
+git commit -m "Ghi Chú thích"
+git push
+-Pull bài về : Update có gi thay đổi ko
+git pull

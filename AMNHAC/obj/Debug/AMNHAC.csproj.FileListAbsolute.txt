@@ -1,0 +1,760 @@
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\AMNHAC.dll.config
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\AMNHAC.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\AMNHAC.pdb
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\csc.exe
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\csc.exe.config
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\csc.rsp
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\csi.exe
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\csi.exe.config
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\csi.rsp
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.AppContext.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Console.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.IO.Compression.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Net.Http.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Net.Sockets.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.ValueTuple.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\vbc.exe
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\vbc.exe.config
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\vbc.rsp
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\VBCSCompiler.exe
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Antlr3.Runtime.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\EntityFramework.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Newtonsoft.Json.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Owin.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.Helpers.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.Mvc.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.Optimization.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.Razor.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.WebPages.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\WebGrease.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.Helpers.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.Mvc.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.Optimization.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.Razor.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.WebPages.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Newtonsoft.Json.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Antlr3.Runtime.pdb
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\EntityFramework.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\obj\Debug\AMNHAC.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\obj\Debug\AMNHAC.csproj.CopyComplete
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\obj\Debug\AMNHAC.dll
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\obj\Debug\AMNHAC.pdb
+C:\Users\HP\source\repos\AMNHAC\AMNHAC\obj\Debug\AMNHAC.csproj.AssemblyReference.cache
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\AMNHAC.dll.config
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\AMNHAC.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\AMNHAC.pdb
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\csc.exe
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\csc.exe.config
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\csc.rsp
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\csi.exe
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\csi.exe.config
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\csi.rsp
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.AppContext.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Collections.Immutable.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Console.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Globalization.Calendars.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.IO.Compression.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.IO.FileSystem.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Net.Http.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Net.Sockets.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Reflection.Metadata.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.ValueTuple.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Xml.XPath.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\vbc.exe
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\vbc.exe.config
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\vbc.rsp
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\VBCSCompiler.exe
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\roslyn\VBCSCompiler.exe.config
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Antlr3.Runtime.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\EntityFramework.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\EntityFramework.SqlServer.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.Google.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Web.Infrastructure.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Newtonsoft.Json.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Owin.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.Helpers.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.Mvc.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.Optimization.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.Razor.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.WebPages.Deployment.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.WebPages.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.WebPages.Razor.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\WebGrease.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.Helpers.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.Mvc.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.Optimization.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.Razor.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.WebPages.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.WebPages.Deployment.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\System.Web.WebPages.Razor.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Newtonsoft.Json.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Antlr3.Runtime.pdb
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\EntityFramework.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\EntityFramework.SqlServer.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.Google.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\obj\Debug\AMNHAC.csproj.AssemblyReference.cache
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\obj\Debug\AMNHAC.csproj.CoreCompileInputs.cache
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\obj\Debug\AMNHAC.csproj.CopyComplete
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\obj\Debug\AMNHAC.dll
+D:\Đồ án\Cơ sở\DATACOSO-main\AMNHAC\obj\Debug\AMNHAC.pdb
+D:\Git\DATACOSO\AMNHAC\bin\AMNHAC.dll.config
+D:\Git\DATACOSO\AMNHAC\bin\AMNHAC.dll
+D:\Git\DATACOSO\AMNHAC\bin\AMNHAC.pdb
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\csc.exe
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\csc.exe.config
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\csc.rsp
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\csi.exe
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\csi.exe.config
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\csi.rsp
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.AppContext.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Collections.Immutable.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Console.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Globalization.Calendars.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.IO.Compression.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.IO.FileSystem.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Net.Http.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Net.Sockets.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Reflection.Metadata.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.ValueTuple.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Xml.XPath.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\vbc.exe
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\vbc.exe.config
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\vbc.rsp
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\VBCSCompiler.exe
+D:\Git\DATACOSO\AMNHAC\bin\roslyn\VBCSCompiler.exe.config
+D:\Git\DATACOSO\AMNHAC\bin\Antlr3.Runtime.dll
+D:\Git\DATACOSO\AMNHAC\bin\EntityFramework.dll
+D:\Git\DATACOSO\AMNHAC\bin\EntityFramework.SqlServer.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Google.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Web.Infrastructure.dll
+D:\Git\DATACOSO\AMNHAC\bin\Newtonsoft.Json.dll
+D:\Git\DATACOSO\AMNHAC\bin\Owin.dll
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.Helpers.dll
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.Mvc.dll
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.Optimization.dll
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.Razor.dll
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.WebPages.Deployment.dll
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.WebPages.dll
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.WebPages.Razor.dll
+D:\Git\DATACOSO\AMNHAC\bin\WebGrease.dll
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.Helpers.xml
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.Mvc.xml
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.Optimization.xml
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.Razor.xml
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.WebPages.xml
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.WebPages.Deployment.xml
+D:\Git\DATACOSO\AMNHAC\bin\System.Web.WebPages.Razor.xml
+D:\Git\DATACOSO\AMNHAC\bin\Newtonsoft.Json.xml
+D:\Git\DATACOSO\AMNHAC\bin\Antlr3.Runtime.pdb
+D:\Git\DATACOSO\AMNHAC\bin\EntityFramework.xml
+D:\Git\DATACOSO\AMNHAC\bin\EntityFramework.SqlServer.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Google.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Git\DATACOSO\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Git\DATACOSO\AMNHAC\obj\Debug\AMNHAC.csproj.AssemblyReference.cache
+D:\Git\DATACOSO\AMNHAC\obj\Debug\AMNHAC.csproj.CoreCompileInputs.cache
+D:\Git\DATACOSO\AMNHAC\obj\Debug\AMNHAC.csproj.CopyComplete
+D:\Git\DATACOSO\AMNHAC\obj\Debug\AMNHAC.dll
+D:\Git\DATACOSO\AMNHAC\obj\Debug\AMNHAC.pdb
+D:\DATACOSO\AMNHAC\bin\AMNHAC.dll.config
+D:\DATACOSO\AMNHAC\bin\AMNHAC.dll
+D:\DATACOSO\AMNHAC\bin\AMNHAC.pdb
+D:\DATACOSO\AMNHAC\bin\roslyn\csc.exe
+D:\DATACOSO\AMNHAC\bin\roslyn\csc.exe.config
+D:\DATACOSO\AMNHAC\bin\roslyn\csc.rsp
+D:\DATACOSO\AMNHAC\bin\roslyn\csi.exe
+D:\DATACOSO\AMNHAC\bin\roslyn\csi.exe.config
+D:\DATACOSO\AMNHAC\bin\roslyn\csi.rsp
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.Managed.Core.targets
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DATACOSO\AMNHAC\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.AppContext.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Collections.Immutable.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Console.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Globalization.Calendars.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.IO.Compression.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.IO.FileSystem.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Net.Http.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Net.Sockets.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Reflection.Metadata.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.ValueTuple.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Xml.XPath.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DATACOSO\AMNHAC\bin\roslyn\vbc.exe
+D:\DATACOSO\AMNHAC\bin\roslyn\vbc.exe.config
+D:\DATACOSO\AMNHAC\bin\roslyn\vbc.rsp
+D:\DATACOSO\AMNHAC\bin\roslyn\VBCSCompiler.exe
+D:\DATACOSO\AMNHAC\bin\roslyn\VBCSCompiler.exe.config
+D:\DATACOSO\AMNHAC\bin\Antlr3.Runtime.dll
+D:\DATACOSO\AMNHAC\bin\EntityFramework.dll
+D:\DATACOSO\AMNHAC\bin\EntityFramework.SqlServer.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Google.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DATACOSO\AMNHAC\bin\Microsoft.Web.Infrastructure.dll
+D:\DATACOSO\AMNHAC\bin\Newtonsoft.Json.dll
+D:\DATACOSO\AMNHAC\bin\Owin.dll
+D:\DATACOSO\AMNHAC\bin\System.Web.Helpers.dll
+D:\DATACOSO\AMNHAC\bin\System.Web.Mvc.dll
+D:\DATACOSO\AMNHAC\bin\System.Web.Optimization.dll
+D:\DATACOSO\AMNHAC\bin\System.Web.Razor.dll
+D:\DATACOSO\AMNHAC\bin\System.Web.WebPages.Deployment.dll
+D:\DATACOSO\AMNHAC\bin\System.Web.WebPages.dll
+D:\DATACOSO\AMNHAC\bin\System.Web.WebPages.Razor.dll
+D:\DATACOSO\AMNHAC\bin\WebGrease.dll
+D:\DATACOSO\AMNHAC\bin\System.Web.Helpers.xml
+D:\DATACOSO\AMNHAC\bin\System.Web.Mvc.xml
+D:\DATACOSO\AMNHAC\bin\System.Web.Optimization.xml
+D:\DATACOSO\AMNHAC\bin\System.Web.Razor.xml
+D:\DATACOSO\AMNHAC\bin\System.Web.WebPages.xml
+D:\DATACOSO\AMNHAC\bin\System.Web.WebPages.Deployment.xml
+D:\DATACOSO\AMNHAC\bin\System.Web.WebPages.Razor.xml
+D:\DATACOSO\AMNHAC\bin\Newtonsoft.Json.xml
+D:\DATACOSO\AMNHAC\bin\Antlr3.Runtime.pdb
+D:\DATACOSO\AMNHAC\bin\EntityFramework.xml
+D:\DATACOSO\AMNHAC\bin\EntityFramework.SqlServer.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Google.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DATACOSO\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DATACOSO\AMNHAC\obj\Debug\AMNHAC.csproj.AssemblyReference.cache
+D:\DATACOSO\AMNHAC\obj\Debug\AMNHAC.csproj.CoreCompileInputs.cache
+D:\DATACOSO\AMNHAC\obj\Debug\AMNHAC.csproj.CopyComplete
+D:\DATACOSO\AMNHAC\obj\Debug\AMNHAC.dll
+D:\DATACOSO\AMNHAC\obj\Debug\AMNHAC.pdb
+D:\Git\DOANCS\AMNHAC\bin\AMNHAC.dll.config
+D:\Git\DOANCS\AMNHAC\bin\AMNHAC.dll
+D:\Git\DOANCS\AMNHAC\bin\AMNHAC.pdb
+D:\Git\DOANCS\AMNHAC\bin\roslyn\csc.exe
+D:\Git\DOANCS\AMNHAC\bin\roslyn\csc.exe.config
+D:\Git\DOANCS\AMNHAC\bin\roslyn\csc.rsp
+D:\Git\DOANCS\AMNHAC\bin\roslyn\csi.exe
+D:\Git\DOANCS\AMNHAC\bin\roslyn\csi.exe.config
+D:\Git\DOANCS\AMNHAC\bin\roslyn\csi.rsp
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Git\DOANCS\AMNHAC\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.AppContext.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Collections.Immutable.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Console.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Globalization.Calendars.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.IO.Compression.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.IO.FileSystem.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Net.Http.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Net.Sockets.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Reflection.Metadata.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.ValueTuple.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Xml.XPath.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Git\DOANCS\AMNHAC\bin\roslyn\vbc.exe
+D:\Git\DOANCS\AMNHAC\bin\roslyn\vbc.exe.config
+D:\Git\DOANCS\AMNHAC\bin\roslyn\vbc.rsp
+D:\Git\DOANCS\AMNHAC\bin\roslyn\VBCSCompiler.exe
+D:\Git\DOANCS\AMNHAC\bin\roslyn\VBCSCompiler.exe.config
+D:\Git\DOANCS\AMNHAC\bin\Antlr3.Runtime.dll
+D:\Git\DOANCS\AMNHAC\bin\EntityFramework.dll
+D:\Git\DOANCS\AMNHAC\bin\EntityFramework.SqlServer.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Google.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Web.Infrastructure.dll
+D:\Git\DOANCS\AMNHAC\bin\Newtonsoft.Json.dll
+D:\Git\DOANCS\AMNHAC\bin\Owin.dll
+D:\Git\DOANCS\AMNHAC\bin\System.Web.Helpers.dll
+D:\Git\DOANCS\AMNHAC\bin\System.Web.Mvc.dll
+D:\Git\DOANCS\AMNHAC\bin\System.Web.Optimization.dll
+D:\Git\DOANCS\AMNHAC\bin\System.Web.Razor.dll
+D:\Git\DOANCS\AMNHAC\bin\System.Web.WebPages.Deployment.dll
+D:\Git\DOANCS\AMNHAC\bin\System.Web.WebPages.dll
+D:\Git\DOANCS\AMNHAC\bin\System.Web.WebPages.Razor.dll
+D:\Git\DOANCS\AMNHAC\bin\WebGrease.dll
+D:\Git\DOANCS\AMNHAC\bin\System.Web.Helpers.xml
+D:\Git\DOANCS\AMNHAC\bin\System.Web.Mvc.xml
+D:\Git\DOANCS\AMNHAC\bin\System.Web.Optimization.xml
+D:\Git\DOANCS\AMNHAC\bin\System.Web.Razor.xml
+D:\Git\DOANCS\AMNHAC\bin\System.Web.WebPages.xml
+D:\Git\DOANCS\AMNHAC\bin\System.Web.WebPages.Deployment.xml
+D:\Git\DOANCS\AMNHAC\bin\System.Web.WebPages.Razor.xml
+D:\Git\DOANCS\AMNHAC\bin\Newtonsoft.Json.xml
+D:\Git\DOANCS\AMNHAC\bin\Antlr3.Runtime.pdb
+D:\Git\DOANCS\AMNHAC\bin\EntityFramework.xml
+D:\Git\DOANCS\AMNHAC\bin\EntityFramework.SqlServer.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Google.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Git\DOANCS\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Git\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.AssemblyReference.cache
+D:\Git\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.CoreCompileInputs.cache
+D:\Git\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.CopyComplete
+D:\Git\DOANCS\AMNHAC\obj\Debug\AMNHAC.dll
+D:\Git\DOANCS\AMNHAC\obj\Debug\AMNHAC.pdb
+D:\DOANCS\AMNHAC\bin\AMNHAC.dll.config
+D:\DOANCS\AMNHAC\bin\AMNHAC.dll
+D:\DOANCS\AMNHAC\bin\AMNHAC.pdb
+D:\DOANCS\AMNHAC\bin\roslyn\csc.exe
+D:\DOANCS\AMNHAC\bin\roslyn\csc.exe.config
+D:\DOANCS\AMNHAC\bin\roslyn\csc.rsp
+D:\DOANCS\AMNHAC\bin\roslyn\csi.exe
+D:\DOANCS\AMNHAC\bin\roslyn\csi.exe.config
+D:\DOANCS\AMNHAC\bin\roslyn\csi.rsp
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.Managed.Core.targets
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DOANCS\AMNHAC\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.AppContext.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Collections.Immutable.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Console.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Globalization.Calendars.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.IO.Compression.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.IO.FileSystem.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Net.Http.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Net.Sockets.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Reflection.Metadata.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.ValueTuple.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Xml.XPath.dll
+D:\DOANCS\AMNHAC\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DOANCS\AMNHAC\bin\roslyn\vbc.exe
+D:\DOANCS\AMNHAC\bin\roslyn\vbc.exe.config
+D:\DOANCS\AMNHAC\bin\roslyn\vbc.rsp
+D:\DOANCS\AMNHAC\bin\roslyn\VBCSCompiler.exe
+D:\DOANCS\AMNHAC\bin\roslyn\VBCSCompiler.exe.config
+D:\DOANCS\AMNHAC\bin\Antlr3.Runtime.dll
+D:\DOANCS\AMNHAC\bin\EntityFramework.dll
+D:\DOANCS\AMNHAC\bin\EntityFramework.SqlServer.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Google.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DOANCS\AMNHAC\bin\Microsoft.Web.Infrastructure.dll
+D:\DOANCS\AMNHAC\bin\Newtonsoft.Json.dll
+D:\DOANCS\AMNHAC\bin\Owin.dll
+D:\DOANCS\AMNHAC\bin\System.Web.Helpers.dll
+D:\DOANCS\AMNHAC\bin\System.Web.Mvc.dll
+D:\DOANCS\AMNHAC\bin\System.Web.Optimization.dll
+D:\DOANCS\AMNHAC\bin\System.Web.Razor.dll
+D:\DOANCS\AMNHAC\bin\System.Web.WebPages.Deployment.dll
+D:\DOANCS\AMNHAC\bin\System.Web.WebPages.dll
+D:\DOANCS\AMNHAC\bin\System.Web.WebPages.Razor.dll
+D:\DOANCS\AMNHAC\bin\WebGrease.dll
+D:\DOANCS\AMNHAC\bin\System.Web.Helpers.xml
+D:\DOANCS\AMNHAC\bin\System.Web.Mvc.xml
+D:\DOANCS\AMNHAC\bin\System.Web.Optimization.xml
+D:\DOANCS\AMNHAC\bin\System.Web.Razor.xml
+D:\DOANCS\AMNHAC\bin\System.Web.WebPages.xml
+D:\DOANCS\AMNHAC\bin\System.Web.WebPages.Deployment.xml
+D:\DOANCS\AMNHAC\bin\System.Web.WebPages.Razor.xml
+D:\DOANCS\AMNHAC\bin\Newtonsoft.Json.xml
+D:\DOANCS\AMNHAC\bin\Antlr3.Runtime.pdb
+D:\DOANCS\AMNHAC\bin\EntityFramework.xml
+D:\DOANCS\AMNHAC\bin\EntityFramework.SqlServer.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Google.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DOANCS\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.AssemblyReference.cache
+D:\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.CoreCompileInputs.cache
+D:\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.CopyComplete
+D:\DOANCS\AMNHAC\obj\Debug\AMNHAC.dll
+D:\DOANCS\AMNHAC\obj\Debug\AMNHAC.pdb
+D:\DOANCS\AMNHAC\obj\Debug\AMNHAC.Migrations.InitialModel.resources
+D:\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.GenerateResource.cache
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\AMNHAC.dll.config
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\AMNHAC.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\AMNHAC.pdb
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\csc.exe
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\csc.exe.config
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\csc.rsp
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\csi.exe
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\csi.exe.config
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\csi.rsp
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.Managed.Core.targets
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.AppContext.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Collections.Immutable.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Console.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Globalization.Calendars.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.IO.Compression.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.IO.FileSystem.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Net.Http.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Net.Sockets.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Reflection.Metadata.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.ValueTuple.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Xml.XPath.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\vbc.exe
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\vbc.exe.config
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\vbc.rsp
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\VBCSCompiler.exe
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\roslyn\VBCSCompiler.exe.config
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Antlr3.Runtime.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\EntityFramework.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\EntityFramework.SqlServer.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Google.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Web.Infrastructure.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Newtonsoft.Json.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Owin.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.Helpers.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.Mvc.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.Optimization.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.Razor.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.WebPages.Deployment.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.WebPages.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.WebPages.Razor.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\WebGrease.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.Helpers.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.Mvc.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.Optimization.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.Razor.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.WebPages.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.WebPages.Deployment.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\System.Web.WebPages.Razor.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Newtonsoft.Json.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Antlr3.Runtime.pdb
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\EntityFramework.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\EntityFramework.SqlServer.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Google.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.AssemblyReference.cache
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.Migrations.InitialModel.resources
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.GenerateResource.cache
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.CoreCompileInputs.cache
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.CopyComplete
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.pdb
