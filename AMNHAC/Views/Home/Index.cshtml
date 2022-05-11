@@ -9,7 +9,7 @@
                             <font style="vertical-align: inherit;">@Html.ActionLink("Xin Chào " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Bạn đã có tài khoản?" }),</font>
                         </font>
                     </span>
-                    
+
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;"> bạn cảm thấy được truyền cảm hứng?</font>
                     </font>
@@ -20,12 +20,139 @@
 
     <div class="dau2">
 
-        <div class="khung" style="background: wheat; box-shadow: 0 0 7px rgb(0 0 0 / 20%); padding: 5px; position: relative; margin-left: 50px; margin-right: 50px;">
+        <div class="khung">
 
             <div class="tieude" style=" padding: 10px 5px;">
-                <h2 class="chutieude" style="color: brown; margin: 0; font-weight: 700;">YOUR SONG</h2>
+                <h2 class="chutieude">YOUR SONG</h2>
             </div>
         </div>
+        <div class="khung">
+            <div class="tieude">
+                <div class="tieude">
+                    <img width="100" height="100" src="https://img.youtube.com/vi/PNajbdtPvRc/maxresdefault.jpg" title="YouTube video player" />
+                </div>
+                <h2 class="chutieude">
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PNajbdtPvRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </h2>
+            </div>
+        </div>
+        <div class="khung">
+            <div class="music">
+                <div class="music-anh">
+                    <img width="100" height="100" src="https://img.youtube.com/vi/PNajbdtPvRc/maxresdefault.jpg" title="YouTube video player" />
+                    <div class="music-name">
+                        Hà Nam
+                    </div>
+                    <div class="music-name">
+                        <img src="~/Content/images/play.png" width="50" height="50" style="float: left;margin-top: -60px;" />
+                    </div>
+                    <audio id="mySong">
+                        <source src="~/Content/music/holo.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="khung">
+            <button class="play-list">Playlist <i class="fas fa-list"></i></button>
+            <div class="itxe" style=" padding-right: 450px;">
+                <div class="music" style="max-width: 500px;margin: 0 auto;border-radius: 12px;background-color: white;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;padding: 35px 15px 30px;">
+                    <div class="music-thumb">
+                        <img src="https://source.unsplash.com/random" alt="" />
+                    </div>
+                    <h3 class="music-name">Beautiful in white</h3>
+                    <div class="widthrange" style="padding-left: 100px;">
+                        <input type="range" name="range" id="range" class="range" />
+                    </div>
+                    <audio id="mySong"><source src="~/Content/music/holo.mp3" type="audio/mp3" /></audio>
+                    <div class="timer">
+                        <div class="duration">2:10</div>
+                        <div class="remaining">-3:10</div>
+                    </div>
+                    <div class="controls">
+                        <ion-icon name="infinite-outline" class="play-infinite"></ion-icon>
+
+                        <ion-icon name="play-back" class="play-back"></ion-icon>
+                        <div class="play">
+                            <div class="player-inner">
+                                <ion-icon name="play" class="play-icon" id="icon"></ion-icon>
+                            </div>
+                        </div>
+                        <ion-icon name="play-forward" class="play-forward"></ion-icon>
+
+                        <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
-   
+
+    @*Load Song*@
+    <script type="text/javascript">
+        var mySong = document.getElementById("mySong");
+        var icon = document.querySelector(".player-inner");
+        var next = document.querySelector(".play-forward");
+        var back = document.querySelector(".play-back");
+
+        var duration = document.querySelector(".duration");
+        var remaining = document.querySelector(".remaining");
+
+        let isPlaying = true;
+        var music = ["holo.mp3", "summer.mp3", "spark.mp3", "home.mp3"]
+        let indexSong = 0;
+
+        mySong.setAttribute("src", `/Content/music/${music[indexSong]}`);
+
+
+        icon.addEventListener("click", playPause);
+        function playPause() {
+            if (isPlaying) {
+                mySong.play();
+                icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
+                isPlaying = false;
+            }
+            else {
+                mySong.pause();
+                icon.innerHTML = `<ion-icon name="play"></ion-icon>`;
+                isPlaying = true;
+            }
+        }
+
+        next.addEventListener("click", function () {
+            changeSong(1);
+        });
+        back.addEventListener("click", function () {
+            changeSong(-1);
+        });
+        function changeSong(dir) {
+            if (dir === 1) {
+                indexSong++;
+                if (indexSong >= music.length) {
+                    indexSong = 0;
+                }
+                isPlaying = true;
+            } else if (dir === -1) {
+                indexSong--;
+                if (indexSong < 0) {
+                    indexSong = music.length - 1;
+                }
+                isPlaying = true;
+            }
+            mySong.setAttribute("src", `/Content/music/${music[indexSong]}`);
+            playPause();
+        }
+
+        function displayTimer() {
+
+        }
+    </script>
+
+
+
 </body>

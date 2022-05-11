@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    @using Microsoft.AspNet.Identity
+    <section class="dau1">
+        <header>
+            <div class="caidau">
+                <h1 class="caichu">
+                    <span class="chudau">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">@Html.ActionLink("Xin Chào " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Bạn đã có tài khoản?" }),</font>
+                        </font>
+                    </span>
+
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;"> bạn cảm thấy được truyền cảm hứng?</font>
+                    </font>
+                </h1>
+            </div>
+        </header>
+    </section>
+
+    <div class="dau2">
+
+        <div class="khung" style="background: wheat; box-shadow: 0 0 7px rgb(0 0 0 / 20%); padding: 5px; position: relative; margin-left: 50px; margin-right: 50px;">
+
+            <div class="tieude" style=" padding: 10px 5px;">
+                <h2 class="chutieude" style="color: brown; margin: 0; font-weight: 700;">YOUR SONG</h2>
+            </div>
+        </div>
+        <div class="khung" style="background: wheat; box-shadow: 0 0 7px rgb(0 0 0 / 20%); padding: 5px; position: relative; margin-left: 50px; margin-right: 50px;">
+
+            <div class="tieude" style=" padding: 10px 5px;">
+                <div class="tieude" style=" padding: 10px 5px;">
+                    <img width="100" height="100" src="https://img.youtube.com/vi/SQKFzrGuqqM/maxresdefault.jpg" title="YouTube video player" />
+                </div>
+                <h2 class="chutieude" style="color: brown; margin: 0; font-weight: 700;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SQKFzrGuqqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+

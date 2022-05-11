@@ -6,32 +6,38 @@
         </a>
     </div>
     <div class="search">
-
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" id="search" placeholder="Search Any Song.." title="Tìm kiếm" />
+        <form action="/Home/Create" method="post">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" name="Id" id="search" placeholder="Search Any Song.." title="Tìm kiếm" style="color:#000" />
+        </form>
     </div>
-    <div class="upload">
-        <buton class="upload_btn">
-            <i class="fa fa-upload" title="Up bài của bạn"> upload song </i>
-        </buton>
+        @*<div class="search">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search"   id="search" placeholder="Search Any Song.." title="Tìm kiếm" style="color:#000" />
+            </div>*@
+        <div class="upload">
+            <buton class="upload_btn">
+                <i class="fa fa-upload" title="Up bài của bạn"> upload song </i>
+            </buton>
+        </div>
+        <nav id="nav">
+            <a href="#" title="Bản cover">discover</a>
+            <a href="/MyMusicProfile/Index" " style="margin: 12px;" title="Trang Cá Nhân">my music profile</a>
+            <a href="#" title="Xem Thêm">more</a>
+        </nav>
+
+        @*<ul class="account">
+                <li>
+                    <a href="#">
+                        Đăng ký
+                    </a>
+                </li>
+                <li><a href="#">Đăng nhập</a></li>
+            </ul>*@
+        @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")
     </div>
-    <nav id="nav">
-        <a href="#" title="Bản cover">discover</a>
-        <a href="/MyMusicProfile/Index"" style="margin: 12px;" title="Trang Cá Nhân">my music profile</a>
-        <a href="#" title="Xem Thêm">more</a>
-    </nav>
+    <div class="clear"></div>
 
-    @*<ul class="account">
-        <li>
-            <a href="#">
-                Đăng ký
-            </a>
-        </li>
-        <li><a href="#">Đăng nhập</a></li>
-    </ul>*@
-    @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")  
-</div>
-<div class="clear"></div>
 
-<style>
-</style>
+    <style>
+    </style>
