@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DiscoverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MyMusicProfileController.cs" />
@@ -262,6 +263,7 @@
     <Content Include="Views\MyMusicProfile\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Discover\IndexDiscover.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

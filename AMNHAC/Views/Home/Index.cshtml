@@ -58,7 +58,7 @@
 
 
         <div class="khung">
-            <button class="play-list">Playlist <i class="fas fa-list"></i></button>
+            <button class="play-list" id="play-list">Playlist <i class="fas fa-list"></i></button>
             <div class="itxe" style=" padding-right: 450px;">
                 <div class="music" style="max-width: 500px;margin: 0 auto;border-radius: 12px;background-color: white;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;padding: 35px 15px 30px;">
                     <div class="music-thumb">
@@ -70,8 +70,10 @@
                     </div>
                     <audio id="mySong"><source src="~/Content/music/holo.mp3" type="audio/mp3" /></audio>
                     <div class="timer">
-                        <div class="duration">2:10</div>
+                       
                         <div class="remaining">-3:10</div>
+                        <div class="duration">2:10</div>
+                        
                     </div>
                     <div class="controls">
                         <ion-icon name="infinite-outline" class="play-infinite"></ion-icon>
@@ -100,8 +102,14 @@
         var next = document.querySelector(".play-forward");
         var back = document.querySelector(".play-back");
 
-        var duration = document.querySelector(".duration");
-        var remaining = document.querySelector(".remaining");
+        var durationTime = document.querySelector(".duration");
+        var remainingTime = document.querySelector(".remaining");
+
+        var rangeBar = document.querySelector(".range");
+
+        displayTimer();
+        let timer ;
+
 
         let isPlaying = true;
         var music = ["holo.mp3", "summer.mp3", "spark.mp3", "home.mp3"]
@@ -116,11 +124,13 @@
                 mySong.play();
                 icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
                 isPlaying = false;
+                timer = setInterval(displayTimer, 500);
             }
             else {
                 mySong.pause();
                 icon.innerHTML = `<ion-icon name="play"></ion-icon>`;
                 isPlaying = true;
+                clearInterval(timer);
             }
         }
 
@@ -148,11 +158,39 @@
             playPause();
         }
 
-        function displayTimer() {
 
+        
+        function displayTimer() {
+            console.log(mySong.duration, mySong.currentTime);
+            var { duration, currentTime } = mySong;
+            rangeBar.max = duration;
+            rangeBar.value = currentTime;
+            remainingTime.textContent = time(currentTime);
+            if (!duration) {
+                durationTime.textContent = "00:00";
+            }
+            else {
+                durationTime.textContent = time(duration);
+            }
+        }
+        function time(number) {
+            var phut = Math.floor(number / 60);
+            var giay = Math.floor(number - phut * 60);
+            return `${phut < 10 ? '0' + phut : phut}:${giay < 10 ? '0' + giay : giay}`;
+        }
+
+       
+        rangeBar.addEventListener("change", changeBar);
+        function changeBar() {
+            mySong.currentTime = rangeBar.value;
+        }
+
+        mySong.addEventListener("ended", endsong)
+        function endsong() {
+            changeSong(1);
         }
     </script>
 
-
+   
 
 </body>
