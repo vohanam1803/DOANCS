@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AMNHAC.Models;
 
 namespace AMNHAC.Controllers
 {
@@ -19,13 +20,13 @@ namespace AMNHAC.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(String timkiem, FormCollection form)
+        public ActionResult Create( FormCollection form)
         {
-
-            timkiem = form["Id"];
-            if (timkiem != "")
+            var mess = new link();
+            mess.timkiem = form["Id"];
+            if (mess.timkiem != "")
             {
-                return View();
+                return View(mess);
             }
             else
             {
