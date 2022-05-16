@@ -69,24 +69,6 @@
         border-bottom: 1px solid #ddd;
     }
 
-    .ticket-list .sold-out {
-        background-color: #f44336;
-        color: #fff;
-        padding: 2px 4px;
-        margin-left: 16px;
-    }
-
-    .ticket-list .quantity {
-        float: right;
-        width: 24px;
-        height: 24px;
-        background-color: #000;
-        color: #fff;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 24px;
-        margin-top: -3px;
-    }
 
 .modal {
     position: fixed;
@@ -109,12 +91,14 @@
     width: 900px;
     max-width: calc(100% - 32px);
     min-height: 200px;
+    max-height:500px;
     position: relative;
     animation: modalFadeIn ease .5s;
+    overflow:auto;
 }
 
 .modal-header {
-    background: #009688;
+    background: #000;
     height: 130px;
     display: flex;
     align-items: center;
@@ -124,7 +108,8 @@
 }
 
 .modal-heading-icon {
-    margin-right: 16px;
+    margin-right: 8px;
+    font-size: 45px;
 }
 
 .modal-close:hover {
@@ -196,4 +181,20 @@
 
 .text-black{
     color:#000;
+}
+
+.Lyrics-form {
+    display: flex;
+    align-items: center;
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.Lyrics .Lyrics-info {
+    color: #000;
+    font-weight: 700;
+    width:50%;
+
 }
