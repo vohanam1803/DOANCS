@@ -199,6 +199,7 @@
     <Content Include="Content\css\header.css" />
     <Content Include="Content\css\ticket.css" />
     <Content Include="Content\css\trangchu.css" />
+    <Content Include="Content\images\AnhNhacViet.png" />
     <Content Include="Content\images\avatar.jpg" />
     <Content Include="Content\images\JK1.jpg" />
     <Content Include="Content\images\JK2.jpg" />

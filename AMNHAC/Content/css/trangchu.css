@@ -2,6 +2,7 @@
 section {
     display: block;
 }
+
 .dau1 {
     margin-top: 15px;
     text-align: center;
@@ -11,6 +12,7 @@ section {
     padding: inherit;
     text-align: center;
 }
+
 h1 {
     text-align: center;
     display: block;
@@ -46,20 +48,24 @@ h1 {
     position: relative;
     width: var(--p18r570z-1);
 }
+
 .dau2 {
     margin-top: 40px;
 }
-.dau2 .khung {
-    background: wheat;
-    box-shadow: 0 0 7px rgb(0 0 0 / 20%);
-    padding: 5px;
-    position: relative;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-    .dau2 .khung .tieude {
-        padding: 10px 5px;
+
+    .dau2 .khung {
+        background: #f5deb338;
+        box-shadow: 0 0 7px rgb(0 0 0 / 30%);
+        padding: 5px;
+        position: relative;
+        margin-left: 50px;
+        margin-right: 50px;
     }
+
+        .dau2 .khung .tieude {
+            padding: 10px 5px;
+        }
+
 .chutieude {
     color: brown;
     margin: 0;
@@ -72,6 +78,7 @@ h1 {
     margin-right: 1030px;
     font-family: 'Poppins', sans-serif;
 }
+
 .music-thanhkeo {
     float: right;
     margin-right: 970px;
@@ -190,4 +197,3 @@ h1 {
 .play-repeat {
     font-size: 20px;
 }
-
