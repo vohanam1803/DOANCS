@@ -1,4 +1,5 @@
-﻿<body>
+﻿<link href="~/Content/css/ticket.css" rel="stylesheet" />
+<body>
     @using Microsoft.AspNet.Identity
     <section class="dau1">
         <header>
@@ -190,6 +191,7 @@
             changeSong(1);
         }
     </script>
+
     <div class="Artist">
         <section class="Artist-Noidung">
             <header class="Artist-Tieude">
@@ -360,5 +362,110 @@
             </div>
         </section>
     </div>
+
+
+
+    <div id="tour" class="tour-section">
+        <div class="content-section">
+            <h2 class="section-heading text-white">TOUR DATES</h2>
+            <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+            <!-- Ticket -->
+            <ul class="ticket-list">
+                <li>September <span class="sold-out">Sold out</span></li>
+                <li>October  <span class="sold-out">Sold out</span></li>
+                <li>November <span class="quantity">3</span></li>
+            </ul>
+            <!-- Places -->
+            <div class="row list-place">
+                <div class="col col-third s-col-full mt-16">
+                    <img src="~/Content/images/newyork.jpg" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h3 class="place-heading">New York</h3>
+                        <p class="place-time">Fri 27 Nov 2016</p>
+                        <p class="place-descr">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                    </div>
+                </div>
+                <div class="col col-third s-col-full mt-16">
+                    <img src="~/Content/images/paris.jpg" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h3 class="place-heading">Paris</h3>
+                        <p class="place-time">Sat 28 Nov 2016</p>
+                        <p class="place-descr">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                    </div>
+                </div>
+                <div class="col col-third s-col-full mt-16">
+                    <img src="~/Content/images/sanfran.jpg" alt="New York" class="place-img">
+                    <div class="place-body">
+                        <h3 class="place-heading">New York</h3>
+                        <p class="place-time">Fri 29 Nov 2016</p>
+                        <p class="place-descr">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="fa fa-times"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="modal-heading-icon fa fa-ticket"></i>
+                Buy Tickets
+            </header>
+
+            <div class="modal-body">
+                <label for="quantity" class="modal-label">
+                    <i class="fa fa-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="quantity" type="text" class="modal-input" placeholder="How many?">
+
+                <label for="email" class="modal-label">
+                    <i class="fa fa-user"></i>
+                    Send To
+                </label>
+                <input id="email" type="text" class="modal-input" placeholder="Enter email">
+
+                <button id="buy-ticket">
+                    Pay <i class="ti-check"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="modal-help text-black">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.modal-close')
+
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        modalClose.addEventListener('click', hideBuyTickets)
+        modal.addEventListener('click', hideBuyTickets)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+
+
 
 </body>

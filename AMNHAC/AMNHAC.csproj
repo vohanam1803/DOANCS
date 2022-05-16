@@ -197,13 +197,17 @@
     <Content Include="Content\css\content.css" />
     <Content Include="Content\css\footer.css" />
     <Content Include="Content\css\header.css" />
+    <Content Include="Content\css\ticket.css" />
     <Content Include="Content\css\trangchu.css" />
     <Content Include="Content\images\avatar.jpg" />
     <Content Include="Content\images\JK1.jpg" />
     <Content Include="Content\images\JK2.jpg" />
     <Content Include="Content\images\JK3.jpg" />
     <Content Include="Content\images\maxresdefault.jpg" />
+    <Content Include="Content\images\newyork.jpg" />
+    <Content Include="Content\images\paris.jpg" />
     <Content Include="Content\images\play.png" />
+    <Content Include="Content\images\sanfran.jpg" />
     <Content Include="Content\music\holo.mp3" />
     <Content Include="Content\music\home.mp3" />
     <Content Include="Content\music\spark.mp3" />
