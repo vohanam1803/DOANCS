@@ -99,7 +99,11 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
+<<<<<<< HEAD
     background: url(../images/maxresdefault.jpg) top center;
+=======
+    background: url(../images/maxresdefault.jpg) top center ;
+>>>>>>> origin/dat
     color: #fff;
 }
 
