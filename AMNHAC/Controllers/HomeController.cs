@@ -30,7 +30,7 @@ namespace AMNHAC.Controllers
             }
             else
             {
-                return null;
+                return View("~/Views/Home/Index.cshtml");
             }
         }
         public ActionResult About()

@@ -1,30 +1,34 @@
-﻿
+﻿@model IEnumerable<AMNHAC.Models.Playlist>
 @{
     ViewBag.Title = "IndexDiscover";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Discover</h2>
+<button class="play-list" id="play-list">Playlist <i class="fas fa-list"></i></button>
 <div class="khung">
-    <button class="play-list" id="play-list">Playlist <i class="fas fa-list"></i></button>
+
+
     <div class="itxe" style=" padding-right: 450px;">
         <div class="music" style="max-width: 500px;margin: 0 auto;border-radius: 12px;background-color: white;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;padding: 35px 15px 30px;">
             <div class="music-thumb">
                 <img src="https://source.unsplash.com/random" alt="" />
             </div>
-            <h3 class="music-name">Beautiful in white</h3>
+
+            <div class="nameMusic" style="color: black; text-align: center; margin-bottom: 20px;"></div>
             <div class="widthrange" style="padding-left: 100px;">
                 <input type="range" name="range" id="range" class="range" />
             </div>
-            <audio id="mySong"><source src="~/Content/music/holo.mp3" type="audio/mp3" /></audio>
+            <audio id="Song"></audio>
             <div class="timer">
 
-                <div class="remaining">-3:10</div>
-                <div class="duration">2:10</div>
+                <div class="remaining"></div>
+                <div class="duration"></div>
 
             </div>
             <div class="controls">
-                <ion-icon name="infinite-outline" class="play-infinite"></ion-icon>
+
+                <ion-icon name="shuffle-outline" class="play-shuffle"></ion-icon>
 
                 <ion-icon name="play-back" class="play-back"></ion-icon>
                 <div class="play">
@@ -35,16 +39,36 @@
                 <ion-icon name="play-forward" class="play-forward"></ion-icon>
 
                 <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+
             </div>
         </div>
     </div>
 
+    <div class="editplaylist" style="padding-left: 15%; padding-right: 15%;">
+        <p>Playlist</p>
+        <div class="playlist">
 
+            @foreach (var item in Model)
+            {
+                <div class="song" data-index="@Html.DisplayFor(modelItem => item.idmusic)">
+                    <div class="thumb" style="background-image: url('@Html.DisplayFor(modelItem => item.hinhmusic)') ">
+                    </div>
+                    <div class="body">
+                        <h3 class="title">@Html.DisplayFor(modelItem => item.namemusic)</h3>
+                        <p class="author">@Html.DisplayFor(modelItem => item.singer)</p>
+                    </div>
+                    <div class="option">
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 </div>
 
 @*Load Song*@
 <script type="text/javascript">
-    var mySong = document.getElementById("mySong");
+    var mySong = document.getElementById("Song");
     var icon = document.querySelector(".player-inner");
     var next = document.querySelector(".play-forward");
     var back = document.querySelector(".play-back");
@@ -54,32 +78,93 @@
 
     var rangeBar = document.querySelector(".range");
 
-    displayTimer();
+    var nameMusic = document.querySelector(".nameMusic");
+    var imageMusic = document.querySelector(".music-thumb img");
+    var spinnerImage = document.querySelector(".music-thumb");
+
+    var agian = document.querySelector(".play-repeat");
+
+    let repeat = false;
+
     let timer;
 
 
+    let playlist = document.querySelector(".playlist");
+    playlist.addEventListener("click", function (e) {
+        
+        console.log(e.target)
+        
+
+    });
+
+
     let isPlaying = true;
-    var music = ["holo.mp3", "summer.mp3", "spark.mp3", "home.mp3"]
+    @*var music = ["314486061.mp3", "1933377945.mp3", "3136278587.mp3", "Ayueyue.mp3"];*@
+
+
+    var music = [
+        {
+
+            id: 1,
+            title: "Luôn có người, sẽ yêu anh - Mã Tu || 总有人，会爱你 - 马修",
+            file: "314486061.mp3",
+            image: "https://img.youtube.com/vi/DkEOyRx2cdw/maxresdefault.jpg"
+
+        },
+        {
+            id: 2,
+            title: "枯鱼之肆 - 阿YueYue",
+            file: "Ayueyue.mp3",
+            image: "https://img.youtube.com/vi/nz1LXVRHN9M/maxresdefault.jpg"
+
+        },
+        {
+            id: 3,
+            title: "Thu Thương Biệt Luyến - Mã Dược Triển | 秋殇别恋 - 马跃展",
+            file: "3136278587.mp3",
+            image: "https://img.youtube.com/vi/84vt6fqXtnI/maxresdefault.jpg"
+
+        },
+        {
+            id: 4,
+            title: "Gió Lay Nhành Đào - Tư Nam/ Tịch Âm Xã | 风过谢桃花 - 司南/汐音社",
+            file: "1933377945.mp3",
+            image: "https://img.youtube.com/vi/O_5VqxldvzQ/maxresdefault.jpg"
+
+        },
+        {
+            id: 5,
+            title: "HoLo",
+            file: "holo.mp3",
+            image: "https://img.youtube.com/vi/Iv5P21D76bw/maxresdefault.jpg"
+
+        }
+
+    ]
+
     let indexSong = 0;
 
-    mySong.setAttribute("src", `/Content/music/${music[indexSong]}`);
+
 
 
     icon.addEventListener("click", playPause);
     function playPause() {
         if (isPlaying) {
+            spinnerImage.classList.add("is-playing");  // dùng animation
             mySong.play();
             icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
             isPlaying = false;
             timer = setInterval(displayTimer, 500);
         }
         else {
+            spinnerImage.classList.remove("is-playing");  // dùng animation
             mySong.pause();
             icon.innerHTML = `<ion-icon name="play"></ion-icon>`;
             isPlaying = true;
             clearInterval(timer);
         }
     }
+
 
     next.addEventListener("click", function () {
         changeSong(1);
@@ -101,7 +186,8 @@
             }
             isPlaying = true;
         }
-        mySong.setAttribute("src", `/Content/music/${music[indexSong]}`);
+        init(indexSong);
+        @*mySong.setAttribute("src", `/Content/music/${music[indexSong].file}`);*@
         playPause();
     }
 
@@ -132,8 +218,34 @@
         mySong.currentTime = rangeBar.value;
     }
 
+    agian.addEventListener("click", function () {
+        if (repeat) {
+            repeat = false;
+            agian.classList.remove("is-repeat");// dùng animation
+        }
+        else {
+
+            repeat = true;
+            agian.classList.add("is-repeat");  // dùng animation
+
+        }
+    });
     mySong.addEventListener("ended", endsong)
     function endsong() {
-        changeSong(1);
+        if (repeat) {
+            isPlaying = true;
+            playPause();
+        }
+        else {
+            changeSong(1);
+        }
     }
+
+    function init(indexSong) {
+        displayTimer();
+        mySong.setAttribute("src", `/Content/music/${music[indexSong].file}`);
+        imageMusic.setAttribute("src", music[indexSong].image);
+        nameMusic.textContent = music[indexSong].title;
+    }
+    init(indexSong);
 </script>

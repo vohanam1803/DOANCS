@@ -5,28 +5,13 @@
 }
 
 <body>
+    
     <div id="checkSrc"> Song for: @Model.timkiem</div>
 
     <iframe width="560" height="315" src="@Model.timkiem" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div id="outCheck"> @Model.timkiem</div>
+   
 
-    <script type="text/javascript">
-        
-        let outcheck = document.getElementById("outCheck");
-        let getoutcheck = outcheck.innerHTML;
-
-        function validURL(getoutcheck) {
-            var pattern = new RegExp('^(https?:\\/\\/)?'); 
-            return !!pattern.test(getoutcheck);
-        }
-
-        if (validURL(getoutcheck) == false ) {
-            outcheck.innerHTML = ` Không tìm thấy!! `;
-        }
-        else {
-            outcheck.innerHTML = ` @Model.timkiem `;
-        }
-    </script>
+   
    
 </body>
 
