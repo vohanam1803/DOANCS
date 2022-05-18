@@ -19,7 +19,7 @@
             <div class="widthrange" style="padding-left: 100px;">
                 <input type="range" name="range" id="range" class="range" />
             </div>
-            <audio id="Song"></audio>
+            <audio id="Song" src=""></audio>
             <div class="timer">
 
                 <div class="remaining"></div>
@@ -48,20 +48,7 @@
         <p>Playlist</p>
         <div class="playlist">
 
-            @foreach (var item in Model)
-            {
-                <div class="song" data-index="@Html.DisplayFor(modelItem => item.idmusic)">
-                    <div class="thumb" style="background-image: url('@Html.DisplayFor(modelItem => item.hinhmusic)') ">
-                    </div>
-                    <div class="body">
-                        <h3 class="title">@Html.DisplayFor(modelItem => item.namemusic)</h3>
-                        <p class="author">@Html.DisplayFor(modelItem => item.singer)</p>
-                    </div>
-                    <div class="option">
-                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-                    </div>
-                </div>
-            }
+
         </div>
     </div>
 </div>
@@ -82,52 +69,50 @@
     var imageMusic = document.querySelector(".music-thumb img");
     var spinnerImage = document.querySelector(".music-thumb");
 
+    var ran = document.querySelector(".play-shuffle");
+
     var agian = document.querySelector(".play-repeat");
 
     let repeat = false;
 
+    let Random = false;
+
     let timer;
 
-
-    let playlist = document.querySelector(".playlist");
-    playlist.addEventListener("click", function (e) {
-        
-        console.log(e.target)
-        
-
-    });
-
-
     let isPlaying = true;
-    @*var music = ["314486061.mp3", "1933377945.mp3", "3136278587.mp3", "Ayueyue.mp3"];*@
 
-
+    
     var music = [
         {
 
             id: 1,
-            title: "Luôn có người, sẽ yêu anh - Mã Tu || 总有人，会爱你 - 马修",
+            title: "Luôn có người, sẽ yêu anh - 总有人，会爱你",
+            singer: "Mã Tu - 马修",
             file: "314486061.mp3",
             image: "https://img.youtube.com/vi/DkEOyRx2cdw/maxresdefault.jpg"
 
         },
         {
             id: 2,
-            title: "枯鱼之肆 - 阿YueYue",
+            title: "枯鱼之肆",
+            singer: "阿YueYue",
             file: "Ayueyue.mp3",
             image: "https://img.youtube.com/vi/nz1LXVRHN9M/maxresdefault.jpg"
 
         },
         {
             id: 3,
-            title: "Thu Thương Biệt Luyến - Mã Dược Triển | 秋殇别恋 - 马跃展",
+            title: "Thu Thương Biệt Luyến -  秋殇别恋",
+            singer: "Mã Dược Triển - 马跃展",
             file: "3136278587.mp3",
             image: "https://img.youtube.com/vi/84vt6fqXtnI/maxresdefault.jpg"
 
         },
         {
             id: 4,
-            title: "Gió Lay Nhành Đào - Tư Nam/ Tịch Âm Xã | 风过谢桃花 - 司南/汐音社",
+            title: "Gió Lay Nhành Đào -  风过谢桃花",
+            singer: "Tư Nam/ Tịch Âm Xã - 司南/汐音社",
+
             file: "1933377945.mp3",
             image: "https://img.youtube.com/vi/O_5VqxldvzQ/maxresdefault.jpg"
 
@@ -135,6 +120,7 @@
         {
             id: 5,
             title: "HoLo",
+            singer: "",
             file: "holo.mp3",
             image: "https://img.youtube.com/vi/Iv5P21D76bw/maxresdefault.jpg"
 
@@ -142,22 +128,56 @@
 
     ]
 
+    //Map html playlist
+    const htmls = this.music.map(song => {
+        return `
+                        <div class="song">
+                            <div class="thumb" style="background-image: url('${song.image}') "></div>
+                            <div class="body">
+                                <h3 class="title"> ${song.title} </h3>
+                                <p class="author"> ${song.singer} </p>
+                            </div>
+                            <div class="option">
+                                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                            </div>
+                        </div>
+
+                `}
+    )
+    const playlist = document.querySelector(".playlist");
+    playlist.innerHTML = htmls.join('')
+
+
+
     let indexSong = 0;
 
 
 
 
+
+
+
+    //Quay hinh
+    const quay = spinnerImage.animate([
+        { transform: 'rotate(360deg)' }
+    ], {
+        duration: 10000,
+        iterations: Infinity
+    })
+    quay.pause()
+
+
     icon.addEventListener("click", playPause);
     function playPause() {
         if (isPlaying) {
-            spinnerImage.classList.add("is-playing");  // dùng animation
+            quay.play()  // dùng animation quay hinh
             mySong.play();
             icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
             isPlaying = false;
             timer = setInterval(displayTimer, 500);
         }
         else {
-            spinnerImage.classList.remove("is-playing");  // dùng animation
+            quay.pause()  // dùng animation quay hinh
             mySong.pause();
             icon.innerHTML = `<ion-icon name="play"></ion-icon>`;
             isPlaying = true;
@@ -166,6 +186,7 @@
     }
 
 
+    //Thay đổi song
     next.addEventListener("click", function () {
         changeSong(1);
     });
@@ -187,12 +208,12 @@
             isPlaying = true;
         }
         init(indexSong);
-        @*mySong.setAttribute("src", `/Content/music/${music[indexSong].file}`);*@
+
         playPause();
     }
 
 
-
+    //Time bài hát
     function displayTimer() {
         console.log(mySong.duration, mySong.currentTime);
         var { duration, currentTime } = mySong;
@@ -213,6 +234,7 @@
     }
 
 
+    //Click thanh nhạc
     rangeBar.addEventListener("change", changeBar);
     function changeBar() {
         mySong.currentTime = rangeBar.value;
@@ -227,9 +249,28 @@
 
             repeat = true;
             agian.classList.add("is-repeat");  // dùng animation
-
+            ran.classList.remove("is-shuffle");// dùng animation
         }
     });
+    ran.addEventListener("click", function () {
+        if (Random) {
+            Random = false;
+            ran.classList.remove("is-shuffle");// dùng animation
+        }
+        else {
+
+            Random = true;
+            ran.classList.add("is-shuffle");  // dùng animation
+            agian.classList.remove("is-repeat");// dùng animation
+            repeat = false;
+        }
+    });
+
+    function ranindex() {
+        return Math.floor(Math.random() * this.music.length);
+    }
+
+    
     mySong.addEventListener("ended", endsong)
     function endsong() {
         if (repeat) {
@@ -237,10 +278,25 @@
             playPause();
         }
         else {
-            changeSong(1);
+            if (Random == true) {
+                do {
+                    init(ranindex());
+                } while (ranindex() === indexSong)
+                
+                indexSong = ranindex()
+                isPlaying = true;
+                playPause();
+            }
+            else {
+                changeSong(1);
+            }
+           
+
+
         }
     }
 
+    //Khởi tạo
     function init(indexSong) {
         displayTimer();
         mySong.setAttribute("src", `/Content/music/${music[indexSong].file}`);

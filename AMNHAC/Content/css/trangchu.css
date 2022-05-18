@@ -89,6 +89,9 @@ h1 {
 .play-repeat.is-repeat{
     color : blue;
 }
+.play-shuffle.is-shuffle {
+    color: blue;
+}
 
 
 .music-thumb {

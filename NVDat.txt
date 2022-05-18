@@ -1,1 +1,73 @@
-Nothing is here
+<script>
+    const $ = document.querySelectorAll.bind(document)
+    const $$ = document.querySelectorAll.bind(document)
+
+    const playlist = $(".playlist");
+
+    const app = {
+        songs: [
+            {
+                title: "Luôn có người, sẽ yêu anh - 总有人，会爱你",
+                singer: "Mã Tu-马修",
+                file: "314486061.mp3",
+                image: "https://img.youtube.com/vi/DkEOyRx2cdw/maxresdefault.jpg"
+
+            },
+            {
+                title: "枯鱼之肆",
+                singer: "阿YueYue",
+                file: "Ayueyue.mp3",
+                image: "https://img.youtube.com/vi/nz1LXVRHN9M/maxresdefault.jpg"
+
+            },
+            {
+                title: "Thu Thương Biệt Luyến -  秋殇别恋",
+                singer: "Mã Dược Triển-马跃展",
+                file: "3136278587.mp3",
+                image: "https://img.youtube.com/vi/84vt6fqXtnI/maxresdefault.jpg"
+
+            },
+            {
+                title: "Gió Lay Nhành Đào -  风过谢桃花",
+                singer: "Tư Nam/ Tịch Âm Xã - 司南/汐音社",
+                file: "1933377945.mp3",
+                image: "https://img.youtube.com/vi/O_5VqxldvzQ/maxresdefault.jpg"
+
+            },
+            {
+                title: "HoLo",
+                singer: "",
+                file: "holo.mp3",
+                image: "https://img.youtube.com/vi/Iv5P21D76bw/maxresdefault.jpg"
+
+            }
+        ],
+
+        render: function () {
+            const htmls = this.songs.map(song => {
+                return `
+                        <div class="song">
+                            <div class="thumb" style="background-image: url('${song.image}') "></div>
+                            <div class="body">
+                                <h3 class="title"> ${song.title} </h3>
+                                <p class="author"> ${song.singer} </p>
+                            </div>
+                            <div class="option">
+                                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                            </div>
+                        </div>
+
+                `}
+            )
+            playlist.innerHTML = htmls.join('')
+           
+        },
+        
+        start: function () {
+            this.render()
+        }
+    }
+
+    app.start();
+
+</script>
