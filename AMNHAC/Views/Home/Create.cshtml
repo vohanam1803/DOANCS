@@ -1,18 +1,20 @@
-﻿@model AMNHAC.Models.link
-@{
+﻿@model  AMNHAC.Models.Video
 
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <body>
+
     
-    <div id="checkSrc"> Song for: @Model.timkiem</div>
+    @foreach (var item in Model)
+    {
+        <div id="checkSrc"> Song for: @Model.title  </div>
 
-    <iframe width="560" height="315" src="@Model.timkiem" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   
+        <iframe width="560" height="315" src="@Model.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    }
 
-   
-   
+
+
 </body>
 
 

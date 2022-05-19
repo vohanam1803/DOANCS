@@ -48,6 +48,7 @@
         <p>Playlist</p>
         <div class="playlist">
 
+            @*Render*@
 
         </div>
     </div>
@@ -123,6 +124,14 @@
             singer: "",
             file: "holo.mp3",
             image: "https://img.youtube.com/vi/Iv5P21D76bw/maxresdefault.jpg"
+
+        },
+        {
+            id: 6,
+            title: "如愿",
+            singer: "Riri就是瑞瑞",
+            file: "如愿 - Riri就是瑞瑞(Cover-王菲).mp3",
+            image: "https://img.youtube.com/vi/3Lz_PBIWDRA/maxresdefault.jpg"
 
         }
 
@@ -265,12 +274,11 @@
             repeat = false;
         }
     });
-
+    //Sinh ngẫu nhiên
     function ranindex() {
         return Math.floor(Math.random() * this.music.length);
     }
-
-    
+    //Chuyển bài khi kết thúc song
     mySong.addEventListener("ended", endsong)
     function endsong() {
         if (repeat) {
