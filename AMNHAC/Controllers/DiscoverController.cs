@@ -16,7 +16,7 @@ namespace AMNHAC.Controllers
         public ActionResult IndexDiscover()
         {
             var all_playlist  = from ss in data.Playlists select ss;
-
+            
             return View(all_playlist);
         }
     }

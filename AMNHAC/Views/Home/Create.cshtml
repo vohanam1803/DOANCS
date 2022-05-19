@@ -1,16 +1,25 @@
-﻿@model  AMNHAC.Models.Video
+﻿@model IEnumerable<AMNHAC.Models.Video>
+@{
 
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <body>
 
-    
+
     @foreach (var item in Model)
     {
-        <div id="checkSrc"> Song for: @Model.title  </div>
-
-        <iframe width="560" height="315" src="@Model.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="song">
+            <div class="thumb" style="background-image: url('https://img.youtube.com/vi/84vt6fqXtnI/maxresdefault.jpg') "></div>
+            <div class="body">
+                <h3 class="title"> @item.title </h3>
+                <p class="author"> Hà Nam </p>
+            </div>
+            <div class="option">
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+        </div>
+        @*<iframe width="560" height="315" src="@item.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
     }
 
 

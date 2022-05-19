@@ -97,8 +97,8 @@ namespace AMNHAC.Controllers
 
     public class HomeController : Controller
     {
-
-
+        VideoCF cf = new VideoCF();
+        Models.Video vk = new Models.Video();
         public ActionResult Index()
         {
 
@@ -114,20 +114,22 @@ namespace AMNHAC.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(FormCollection form)
         {
-           
+
+            var all_list = cf.Videos.ToList();
+            
 
             var vk = new Models.Video();
             vk.title = form["Id"];
 
 
             SearchYouTube searchObject = new SearchYouTube();
-            await searchObject.RunYouTube(vk.title);
+            all_list = await searchObject.RunYouTube(vk.title);
 
             
 
             if (vk.title != "")
             {
-                return View(vk);
+                return View(all_list);
             }
             else
             {
