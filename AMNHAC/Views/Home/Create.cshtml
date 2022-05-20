@@ -5,13 +5,16 @@
 }
 
 <body>
-
+    <div class="song" style="text-align:center;">
+        <h3 class="title" style="text-align:center;"> @ViewBag.Message </h3>
+    </div>
 
     @foreach (var item in Model)
     {
         <div class="song">
-            <div class="thumb" style="background-image: url('https://img.youtube.com/vi/84vt6fqXtnI/maxresdefault.jpg') "></div>
+            <div class="thumb" style="background-image: url('https://img.youtube.com/vi/@item.id/maxresdefault.jpg') "></div>
             <div class="body">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3 class="title"> @item.title </h3>
                 <p class="author"> Hà Nam </p>
             </div>
@@ -19,11 +22,11 @@
                 <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
             </div>
         </div>
-        @*<iframe width="560" height="315" src="@item.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
+       
     }
 
 
-
+   
 </body>
 
 

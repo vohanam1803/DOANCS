@@ -47,7 +47,7 @@
     <div class="editplaylist" style="padding-left: 15%; padding-right: 15%;">
         <p>Playlist</p>
         <div class="playlist">
-
+            
             @*Render*@
 
         </div>
@@ -136,11 +136,12 @@
         }
 
     ]
-
+    
     //Map html playlist
-    const htmls = this.music.map(song => {
+    const htmls = this.music.map((song,  indexSong) => {
         return `
-                        <div class="song">
+
+                        <div class="song" data-index="${indexSong}">
                             <div class="thumb" style="background-image: url('${song.image}') "></div>
                             <div class="body">
                                 <h3 class="title"> ${song.title} </h3>
@@ -155,8 +156,20 @@
     )
     const playlist = document.querySelector(".playlist");
     playlist.innerHTML = htmls.join('')
-
-
+    playlist.addEventListener("click", scrollClick);
+    function scrollClick(e) {
+        const songNode = e.target.closest('.song');
+        if (songNode || e.target.closest('.option')) {
+            indexSong = Number(songNode.getAttribute('data-index'))
+            init(indexSong)
+            quay.play()  // dùng animation quay hinh
+            mySong.play();
+            icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
+            isPlaying = false;
+            timer = setInterval(displayTimer, 500);
+            @*playlist.classList.add("is-songclick");*@
+        }
+    }
 
     let indexSong = 0;
 

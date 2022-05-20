@@ -17,16 +17,17 @@ using Google.Apis.YouTube.v3.Data;
 
 namespace AMNHAC.Controllers
 {
+
     public class SearchYouTube
     {
 
         public int ID { get; set; }
 
-       
+
         public async Task<List<Models.Video>> RunYouTube(string timkiem)
         {
             List<Models.Video> vk = new List<Models.Video>();
-          
+
 
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
@@ -62,12 +63,12 @@ namespace AMNHAC.Controllers
                             vs.title = searchResult.Snippet.Title;
                             vs.id = searchResult.Id.VideoId;
                             vs.link = searchResult.ETag;
-                            
+
 
                         }
-                        
+
                         vk.Add(vs);
-                        
+
                         break;
 
                     case "youtube#channel":
@@ -83,7 +84,7 @@ namespace AMNHAC.Controllers
 
             }
 
-            
+
 
             Console.WriteLine(String.Format("Videos:\n{0}\n", string.Join("\n", videos)));
             Console.WriteLine(String.Format("Channels:\n{0}\n", string.Join("\n", channels)));
@@ -92,7 +93,8 @@ namespace AMNHAC.Controllers
 
             return vk;
         }
-        
+
+       
     }
 
     public class HomeController : Controller
@@ -116,7 +118,7 @@ namespace AMNHAC.Controllers
         {
 
             var all_list = cf.Videos.ToList();
-            
+
 
             var vk = new Models.Video();
             vk.title = form["Id"];
@@ -129,7 +131,17 @@ namespace AMNHAC.Controllers
 
             if (vk.title != "")
             {
-                return View(all_list);
+                if(all_list.Count == 0)
+                {
+                    ViewBag.Message = "Can't find!!!!!";
+                    return View(all_list);
+                }
+                else
+                {
+                    ViewBag.Message = "Your Search Results!!";
+                    return View(all_list);
+                }
+                
             }
             else
             {

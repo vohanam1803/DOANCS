@@ -93,7 +93,9 @@ h1 {
     color: blue;
 }
 
-
+.song.is-songclick{
+    background-color: aqua;
+}
 .music-thumb {
     width: 100px;
     height: 100px;
@@ -262,7 +264,6 @@ h1 {
         color: #999;
         font-size: 18px;
     }
-
 
 
 
