@@ -20,7 +20,6 @@ namespace AMNHAC.Controllers
 
     public class SearchYouTube
     {
-
         public int ID { get; set; }
 
 
@@ -47,8 +46,6 @@ namespace AMNHAC.Controllers
             List<string> playlists = new List<string>();
 
 
-
-
             // Add each result to the appropriate list, and then display the lists of
             // matching videos, channels, and playlists.
 
@@ -63,8 +60,7 @@ namespace AMNHAC.Controllers
                             vs.title = searchResult.Snippet.Title;
                             vs.id = searchResult.Id.VideoId;
                             vs.link = searchResult.ETag;
-
-
+                            vs.author = searchResult.Snippet.ChannelTitle;
                         }
 
                         vk.Add(vs);
@@ -79,22 +75,14 @@ namespace AMNHAC.Controllers
                         playlists.Add(String.Format("{0} ({1})", searchResult.Snippet.Title, searchResult.Id.PlaylistId));
                         break;
                 }
-
-
-
             }
-
-
 
             Console.WriteLine(String.Format("Videos:\n{0}\n", string.Join("\n", videos)));
             Console.WriteLine(String.Format("Channels:\n{0}\n", string.Join("\n", channels)));
             Console.WriteLine(String.Format("Playlists:\n{0}\n", string.Join("\n", playlists)));
 
-
             return vk;
         }
-
-       
     }
 
     public class HomeController : Controller
@@ -116,18 +104,13 @@ namespace AMNHAC.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(FormCollection form)
         {
-
             var all_list = cf.Videos.ToList();
-
 
             var vk = new Models.Video();
             vk.title = form["Id"];
 
-
             SearchYouTube searchObject = new SearchYouTube();
             all_list = await searchObject.RunYouTube(vk.title);
-
-            
 
             if (vk.title != "")
             {

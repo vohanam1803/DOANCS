@@ -5,54 +5,99 @@
 }
 
 <h2>Discover</h2>
-<button class="play-list" id="play-list">Playlist <i class="fas fa-list"></i></button>
-<div class="khung">
+@*<button class="play-list" id="play-list">Playlist <i class="fas fa-list"></i></button>*@
+
+<div class="place-body">
+    <button class="btn js-buy-ticket s-full-width">Playlist</button>
+
+    <div class="khung">
 
 
-    <div class="itxe" style=" padding-right: 450px;">
-        <div class="music" style="max-width: 500px;margin: 0 auto;border-radius: 12px;background-color: white;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;padding: 35px 15px 30px;">
-            <div class="music-thumb">
-                <img src="https://source.unsplash.com/random" alt="" />
-            </div>
-
-            <div class="nameMusic" style="color: black; text-align: center; margin-bottom: 20px;"></div>
-            <div class="widthrange" style="padding-left: 100px;">
-                <input type="range" name="range" id="range" class="range" />
-            </div>
-            <audio id="Song" src=""></audio>
-            <div class="timer">
-
-                <div class="remaining"></div>
-                <div class="duration"></div>
-
-            </div>
-            <div class="controls">
-
-                <ion-icon name="shuffle-outline" class="play-shuffle"></ion-icon>
-
-                <ion-icon name="play-back" class="play-back"></ion-icon>
-                <div class="play">
-                    <div class="player-inner">
-                        <ion-icon name="play" class="play-icon" id="icon"></ion-icon>
-                    </div>
+        <div class="itxe" style=" padding-right: 450px;">
+            <div class="music" style="max-width: 500px;margin: 0 auto;border-radius: 12px;background-color: white;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;padding: 35px 15px 30px;">
+                <div class="music-thumb">
+                    <img src="https://source.unsplash.com/random" alt="" />
                 </div>
-                <ion-icon name="play-forward" class="play-forward"></ion-icon>
 
-                <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+                <div class="nameMusic" style="color: black; text-align: center; margin-bottom: 20px;"></div>
+                <div class="widthrange" style="padding-left: 100px;">
+                    <input type="range" name="range" id="range" class="range" />
+                </div>
+                <audio id="Song" src=""></audio>
+                <div class="timer">
 
+                    <div class="remaining"></div>
+                    <div class="duration"></div>
+
+                </div>
+                <div class="controls">
+
+                    <ion-icon name="shuffle-outline" class="play-shuffle"></ion-icon>
+
+                    <ion-icon name="play-back" class="play-back"></ion-icon>
+                    <div class="play">
+                        <div class="player-inner">
+                            <ion-icon name="play" class="play-icon" id="icon"></ion-icon>
+                        </div>
+                    </div>
+                    <ion-icon name="play-forward" class="play-forward"></ion-icon>
+
+                    <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="editplaylist" style="padding-left: 15%; padding-right: 15%;">
-        <p>Playlist</p>
-        <div class="playlist">
-            
-            @*Render*@
+        <!--<div class="editplaylist" style="padding-left: 15%; padding-right: 15%;">
+            <p>Playlist</p>
+            <div class="playlist">-->
+        @*Render*@
 
+        <!--</div>
+        </div>-->
+
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="fa fa-times"></i>
+                </div>
+
+                <header class="modal-header">
+                    <div class="Lyrics-form ">
+                        <i class="modal-heading-icon fa fa-info"></i>
+                        <h1 class="Lyrics-title">Playlist</h1>
+                    </div>
+
+                </header>
+
+                <div class="modal-body">
+
+
+                    <div class="Lyrics">
+                        <p class="Lyrics-info">
+                            <div class="editplaylist" style="padding-left: 15%; padding-right: 15%;">
+                                <p>Playlist</p>
+                                <div class="playlist">
+
+                                    @*Render*@
+
+                                </div>
+                            </div>
+                            ____________________
+                        </p>
+
+                    </div>
+                </div>
+
+                <footer class="modal-footer">
+                    <p class="modal-help text-black">Need <a href="">help?</a></p>
+                </footer>
+            </div>
         </div>
     </div>
 </div>
+
+
 
 @*Load Song*@
 <script type="text/javascript">
@@ -71,6 +116,7 @@
     var spinnerImage = document.querySelector(".music-thumb");
 
     var ran = document.querySelector(".play-shuffle");
+    
 
     var agian = document.querySelector(".play-repeat");
 
@@ -83,6 +129,7 @@
     let isPlaying = true;
 
     
+
     var music = [
         {
 
@@ -136,6 +183,7 @@
         }
 
     ]
+
     
     //Map html playlist
     const htmls = this.music.map((song,  indexSong) => {
@@ -154,6 +202,8 @@
 
                 `}
     )
+
+
     const playlist = document.querySelector(".playlist");
     playlist.innerHTML = htmls.join('')
     playlist.addEventListener("click", scrollClick);
@@ -167,15 +217,14 @@
             icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
             isPlaying = false;
             timer = setInterval(displayTimer, 500);
-            @*playlist.classList.add("is-songclick");*@
+            
         }
     }
 
+
+   
+
     let indexSong = 0;
-
-
-
-
 
 
 
@@ -218,17 +267,20 @@
     function changeSong(dir) {
         if (dir === 1) {
             indexSong++;
+            
             if (indexSong >= music.length) {
                 indexSong = 0;
             }
             isPlaying = true;
         } else if (dir === -1) {
             indexSong--;
+           
             if (indexSong < 0) {
                 indexSong = music.length - 1;
             }
             isPlaying = true;
         }
+
         init(indexSong);
 
         playPause();
@@ -261,6 +313,8 @@
     function changeBar() {
         mySong.currentTime = rangeBar.value;
     }
+
+    
 
     agian.addEventListener("click", function () {
         if (repeat) {
@@ -303,7 +357,7 @@
                 do {
                     init(ranindex());
                 } while (ranindex() === indexSong)
-                
+
                 indexSong = ranindex()
                 isPlaying = true;
                 playPause();
@@ -311,18 +365,48 @@
             else {
                 changeSong(1);
             }
-           
+
 
 
         }
     }
-
+ 
+    
+    
+    
     //Khởi tạo
     function init(indexSong) {
         displayTimer();
         mySong.setAttribute("src", `/Content/music/${music[indexSong].file}`);
         imageMusic.setAttribute("src", music[indexSong].image);
         nameMusic.textContent = music[indexSong].title;
+      
     }
     init(indexSong);
+</script>
+
+
+<script>
+    const buyBtns = document.querySelectorAll('.js-buy-ticket')
+    const modal = document.querySelector('.js-modal')
+    const modalContainer = document.querySelector('.js-modal-container')
+    const modalClose = document.querySelector('.modal-close')
+
+    function showBuyTickets() {
+        modal.classList.add('open')
+    }
+
+    function hideBuyTickets() {
+        modal.classList.remove('open')
+    }
+
+    for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showBuyTickets)
+    }
+
+    modalClose.addEventListener('click', hideBuyTickets)
+    modal.addEventListener('click', hideBuyTickets)
+    modalContainer.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
 </script>
