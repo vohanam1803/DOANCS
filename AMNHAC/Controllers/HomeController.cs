@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Speech.Synthesis;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using AMNHAC.Models;
 
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Services;
-using Google.Apis.Upload;
-using Google.Apis.Util.Store;
-using Google.Apis.YouTube.v3;
-using Google.Apis.YouTube.v3.Data;
 
+using Google.Apis.Services;
+
+using Google.Apis.YouTube.v3;
+using NAudio.Lame;
+using NAudio.Wave;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using YoutubeExtractor;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AMNHAC.Controllers
 {
@@ -83,7 +89,11 @@ namespace AMNHAC.Controllers
 
             return vk;
         }
+
+       
+
     }
+    
 
     public class HomeController : Controller
     {
@@ -108,9 +118,12 @@ namespace AMNHAC.Controllers
 
             var vk = new Models.Video();
             vk.title = form["Id"];
-
+            //Youtube API
             SearchYouTube searchObject = new SearchYouTube();
             all_list = await searchObject.RunYouTube(vk.title);
+
+
+
 
             if (vk.title != "")
             {
@@ -141,6 +154,12 @@ namespace AMNHAC.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Test()
+        {
 
             return View();
         }

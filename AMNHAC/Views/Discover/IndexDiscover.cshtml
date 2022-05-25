@@ -7,8 +7,11 @@
 <h2>Discover</h2>
 @*<button class="play-list" id="play-list">Playlist <i class="fas fa-list"></i></button>*@
 
+
 <div class="place-body">
     <button class="btn js-buy-ticket s-full-width">Playlist</button>
+
+    
 
     <div class="khung">
 
@@ -101,6 +104,10 @@
 
 @*Load Song*@
 <script type="text/javascript">
+   
+    
+
+
     var mySong = document.getElementById("Song");
     var icon = document.querySelector(".player-inner");
     var next = document.querySelector(".play-forward");
@@ -116,7 +123,7 @@
     var spinnerImage = document.querySelector(".music-thumb");
 
     var ran = document.querySelector(".play-shuffle");
-    
+
 
     var agian = document.querySelector(".play-repeat");
 
@@ -128,7 +135,7 @@
 
     let isPlaying = true;
 
-    
+
 
     var music = [
         {
@@ -184,9 +191,19 @@
 
     ]
 
-    
+    var test = [{
+
+    }];
+    test.forEach(function (element) {
+        console.log(element);
+    });
+
+    music.forEach(function (element) {
+        console.log(element);
+    });
+
     //Map html playlist
-    const htmls = this.music.map((song,  indexSong) => {
+    const htmls = this.music.map((song, indexSong) => {
         return `
 
                         <div class="song" data-index="${indexSong}">
@@ -217,12 +234,12 @@
             icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
             isPlaying = false;
             timer = setInterval(displayTimer, 500);
-            
+
         }
     }
 
 
-   
+
 
     let indexSong = 0;
 
@@ -267,14 +284,14 @@
     function changeSong(dir) {
         if (dir === 1) {
             indexSong++;
-            
+
             if (indexSong >= music.length) {
                 indexSong = 0;
             }
             isPlaying = true;
         } else if (dir === -1) {
             indexSong--;
-           
+
             if (indexSong < 0) {
                 indexSong = music.length - 1;
             }
@@ -314,7 +331,7 @@
         mySong.currentTime = rangeBar.value;
     }
 
-    
+
 
     agian.addEventListener("click", function () {
         if (repeat) {
@@ -370,17 +387,17 @@
 
         }
     }
- 
-    
-    
-    
+
+
+
+
     //Khởi tạo
     function init(indexSong) {
         displayTimer();
         mySong.setAttribute("src", `/Content/music/${music[indexSong].file}`);
         imageMusic.setAttribute("src", music[indexSong].image);
         nameMusic.textContent = music[indexSong].title;
-      
+
     }
     init(indexSong);
 </script>

@@ -996,3 +996,10 @@ D:\DoAnCoSo\DOANCS\AMNHAC\bin\Google.Apis.YouTube.v3.pdb
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\Google.Apis.YouTube.v3.xml
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\Remotion.Linq.dll
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\Remotion.Linq.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\libmp3lame.32.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\libmp3lame.64.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\NAudio.Core.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\NAudio.Lame.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\NAudio.Lame.pdb
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\YoutubeExtractor.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\YoutubeExtractor.xml
