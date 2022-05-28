@@ -9,29 +9,24 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using AMNHAC.Models;
-
-
+using Aspose.Html.DataScraping.MultimediaScraping;
 using Google.Apis.Services;
 
 using Google.Apis.YouTube.v3;
-using NAudio.Lame;
-using NAudio.Wave;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using YoutubeExtractor;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace AMNHAC.Controllers
 {
+    ///////////////////////////////////////////////////////
 
     public class SearchYouTube
     {
         public int ID { get; set; }
 
 
-        public async Task<List<Models.Video>> RunYouTube(string timkiem)
+        public async Task<List<Video>> RunYouTube(string timkiem)
         {
-            List<Models.Video> vk = new List<Models.Video>();
+            List<Video> vk = new List<Video>();
 
 
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
@@ -61,7 +56,7 @@ namespace AMNHAC.Controllers
                 {
                     case "youtube#video":
                         videos.Add(String.Format("{0} ({1})", searchResult.Snippet.Title, searchResult.Id.VideoId));
-                        var vs = new Models.Video();
+                        var vs = new Video();
                         {
                             vs.title = searchResult.Snippet.Title;
                             vs.id = searchResult.Id.VideoId;
@@ -90,15 +85,18 @@ namespace AMNHAC.Controllers
             return vk;
         }
 
-       
 
+        /////////////////
     }
-    
 
     public class HomeController : Controller
     {
         VideoCF cf = new VideoCF();
-        Models.Video vk = new Models.Video();
+        Video vk = new Video();
+       
+        
+        SearchYouTube searchObject = new SearchYouTube();
+        List<Video> test = new List<Video>();
         public ActionResult Index()
         {
 
@@ -111,23 +109,25 @@ namespace AMNHAC.Controllers
         {
             return View();
         }
+
+
         [HttpPost]
         public async Task<ActionResult> Create(FormCollection form)
         {
             var all_list = cf.Videos.ToList();
 
-            var vk = new Models.Video();
+            var vk = new Video();
             vk.title = form["Id"];
             //Youtube API
-            SearchYouTube searchObject = new SearchYouTube();
+            
+           
             all_list = await searchObject.RunYouTube(vk.title);
 
-
-
-
+           
+            
             if (vk.title != "")
             {
-                if(all_list.Count == 0)
+                if (all_list.Count == 0)
                 {
                     ViewBag.Message = "Can't find!!!!!";
                     return View(all_list);
@@ -137,12 +137,13 @@ namespace AMNHAC.Controllers
                     ViewBag.Message = "Your Search Results!!";
                     return View(all_list);
                 }
-                
+
             }
             else
             {
                 return View("~/Views/Home/Index.cshtml");
             }
+
         }
         public ActionResult About()
         {
@@ -157,11 +158,20 @@ namespace AMNHAC.Controllers
 
             return View();
         }
-
-        public ActionResult Test()
+        
+        public async Task<ActionResult> Test(FormCollection form)
         {
 
-            return View();
+            var all_list = cf.Videos.ToList();
+
+            var vk = new Video();
+            vk.title = form["Id"];
+            //Youtube API
+
+
+            all_list = await searchObject.RunYouTube(vk.title);
+            return View(all_list);
         }
+
     }
 }

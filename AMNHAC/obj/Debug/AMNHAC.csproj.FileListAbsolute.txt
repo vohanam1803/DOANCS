@@ -1003,3 +1003,7 @@ D:\DoAnCoSo\DOANCS\AMNHAC\bin\NAudio.Lame.dll
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\NAudio.Lame.pdb
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\YoutubeExtractor.dll
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\YoutubeExtractor.xml
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\Interop.WMPLib.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.ResolveComReference.cache
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Aspose.HTML.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Aspose.HTML.xml

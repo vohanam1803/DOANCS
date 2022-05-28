@@ -26,7 +26,10 @@
                 <div class="widthrange" style="padding-left: 100px;">
                     <input type="range" name="range" id="range" class="range" />
                 </div>
-                <audio id="Song" src=""></audio>
+
+                <audio id="Song" >
+                    <source type=""/>
+                </audio>
                 <div class="timer">
 
                     <div class="remaining"></div>
@@ -51,13 +54,7 @@
             </div>
         </div>
 
-        <!--<div class="editplaylist" style="padding-left: 15%; padding-right: 15%;">
-            <p>Playlist</p>
-            <div class="playlist">-->
-        @*Render*@
-
-        <!--</div>
-        </div>-->
+        
 
         <div class="modal js-modal">
             <div class="modal-container js-modal-container">
@@ -83,6 +80,7 @@
                                 <div class="playlist">
 
                                     @*Render*@
+                                    
 
                                 </div>
                             </div>
@@ -102,11 +100,14 @@
 
 
 
-@*Load Song*@
+@*Load Song*@   
 <script type="text/javascript">
-   
-    
+    function openList(e) {
+        var id = e.currentTarget.getAttribute('data-id')
+        console.log(id)
+    }
 
+    
 
     var mySong = document.getElementById("Song");
     var icon = document.querySelector(".player-inner");
@@ -191,16 +192,7 @@
 
     ]
 
-    var test = [{
-
-    }];
-    test.forEach(function (element) {
-        console.log(element);
-    });
-
-    music.forEach(function (element) {
-        console.log(element);
-    });
+    
 
     //Map html playlist
     const htmls = this.music.map((song, indexSong) => {
