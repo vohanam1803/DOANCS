@@ -1028,3 +1028,17 @@ D:\test\DOANCS\AMNHAC\bin\Google.Apis.YouTube.v3.xml
 D:\test\DOANCS\AMNHAC\bin\NAudio.Lame.pdb
 D:\test\DOANCS\AMNHAC\bin\Remotion.Linq.xml
 D:\test\DOANCS\AMNHAC\bin\YoutubeExtractor.xml
+D:\test\DOANCS\AMNHAC\bin\Microsoft.Office.Client.Policy.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.Office.Client.TranslationServices.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.Office.SharePoint.Tools.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.Online.SharePoint.Client.Tenant.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.ProjectServer.Client.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.DocumentManagement.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Publishing.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Search.Applications.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Search.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Taxonomy.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.UserProfiles.dll
+D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.WorkflowServices.dll

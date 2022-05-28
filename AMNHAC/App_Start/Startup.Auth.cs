@@ -54,9 +54,9 @@ namespace AMNHAC
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "582584026262241",
+               appSecret: "a2c0ace1ca5da0e5c6138c53d76ef32f");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
