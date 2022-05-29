@@ -9,4 +9,13 @@
       <Column Name="link" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Video" Member="Videos">
+    <Type Name="Video">
+      <Column Name="id" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="author" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="link" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="hinh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
 </Database>

@@ -20,7 +20,7 @@ namespace AMNHAC.Controllers
         // GET: Discover
 
         DataClasses1DataContext data = new DataClasses1DataContext();
-        VideoCF cf = new VideoCF();
+        
         public ActionResult IndexDiscover()
         {
             /*var all_list = cf.Videos.ToList();

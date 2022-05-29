@@ -31,7 +31,7 @@ namespace AMNHAC.Controllers
 
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = "AIzaSyA044O5L7G9VVMeAIxytPrqOMoUaa6v6_o",
+                ApiKey = "AIzaSyDDefFSi5CM8Ns5PyCsAOGa72qqTrKRRIo",
                 ApplicationName = this.GetType().ToString()
             });
 
@@ -91,10 +91,11 @@ namespace AMNHAC.Controllers
 
     public class HomeController : Controller
     {
-        VideoCF cf = new VideoCF();
-        Video vk = new Video();
-       
-        
+
+
+
+        DataClasses1DataContext data = new DataClasses1DataContext();
+
         SearchYouTube searchObject = new SearchYouTube();
         List<Video> test = new List<Video>();
         public ActionResult Index()
@@ -114,28 +115,28 @@ namespace AMNHAC.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(FormCollection form)
         {
-            var all_list = cf.Videos.ToList();
+
 
             var vk = new Video();
             vk.title = form["Id"];
             //Youtube API
-            
-           
-            all_list = await searchObject.RunYouTube(vk.title);
 
-           
-            
+
+            test = await searchObject.RunYouTube(vk.title);
+
+
+
             if (vk.title != "")
             {
-                if (all_list.Count == 0)
+                if (test.Count == 0)
                 {
                     ViewBag.Message = "Can't find!!!!!";
-                    return View(all_list);
+                    return View(test);
                 }
                 else
                 {
                     ViewBag.Message = "Your Search Results!!";
-                    return View(all_list);
+                    return View(test);
                 }
 
             }
@@ -158,18 +159,39 @@ namespace AMNHAC.Controllers
 
             return View();
         }
-        
+
         public async Task<ActionResult> Test(FormCollection form)
         {
-
-            var all_list = cf.Videos.ToList();
-
+            List<Video> vs = new List<Video>();
             var vk = new Video();
+
             vk.title = form["Id"];
             //Youtube API
 
 
-            all_list = await searchObject.RunYouTube(vk.title);
+            test = await searchObject.RunYouTube(vk.title);
+            vs = new List<Video>(test);
+            /*for(var item =0;item < test.Count;item++)
+            {
+                vk.title = test[item].title;
+                vk.id = test[item].id;
+                vk.author = test[item].author;
+
+            }*/
+            for (var item = 0; item < test.Count; item++)
+            {
+                vs[item].title = test[item].title;
+                vs[item].id = test[item].id;
+                vs[item].author = test[item].author;
+                vs[item].link = test[item].link;
+                if (vk.title == vs[item].title)
+                {
+                    data.Videos.InsertOnSubmit(vs[item]);
+                }
+            }
+            data.SubmitChanges();
+            //Sổ danh sách 
+            var all_list = data.Videos.ToList();
             return View(all_list);
         }
 
