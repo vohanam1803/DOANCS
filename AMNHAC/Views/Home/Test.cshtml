@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Test</h2>
+<h3 class="title" style="text-align:center;"> @ViewBag.Message </h3>
 @foreach (var item in Model)
 {
 
@@ -15,5 +15,10 @@
             <h3 class="title"> @item.title</h3>
             <p class="author"> @item.author </p>
         </div>
+        <form action="/Home/DetelePlaylist" method="post">
+            <input type="text" id="domain" name="Id" value="@item.id" style="display:none;" />
+
+            <button type="submit">Detele From Playlist</button>
+        </form>
     </div>
 }

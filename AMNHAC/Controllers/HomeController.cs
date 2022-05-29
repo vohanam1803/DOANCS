@@ -108,7 +108,7 @@ namespace AMNHAC.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            return View("~/Views/Home/Index.cshtml");
         }
 
 
@@ -142,6 +142,7 @@ namespace AMNHAC.Controllers
             }
             else
             {
+
                 return View("~/Views/Home/Index.cshtml");
             }
 
@@ -192,8 +193,32 @@ namespace AMNHAC.Controllers
             data.SubmitChanges();
             //Sổ danh sách 
             var all_list = data.Videos.ToList();
-            return View(all_list);
+            if(all_list.Count == 0)
+            {
+                ViewBag.Message = "You Not Have Anything In Playlist";
+                return View(all_list);
+            }
+            else
+            {
+                ViewBag.Message = "Your Playlist";
+                return View(all_list);
+            }
+            
         }
 
+
+        public ActionResult DetelePlaylist(string id)
+        {
+            var D_playlist = data.Videos.Where(m => m.id == id).First();
+            return View();
+        }
+        [HttpPost]
+        public ActionResult DetelePlaylist(string id, FormCollection collection)
+        {
+            var D_playlist = data.Videos.Where(m => m.id == id).First();
+            data.Videos.DeleteOnSubmit(D_playlist);
+            data.SubmitChanges();
+            return RedirectToAction("Test");
+        }
     }
 }
