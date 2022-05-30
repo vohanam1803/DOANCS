@@ -7,7 +7,7 @@
 <body>
 
     <h3 class="title" style="text-align:center;"> @ViewBag.Message </h3>
-
+    <h3 class="title" style="text-align:center; color:red;"> @ViewBag.Check</h3>
     <div class="test">
         @foreach (var item in Model)
         {
@@ -25,7 +25,7 @@
 
                     <form action="/Home/Test" method="post">
                         <input type="text" id="domain" name="Id" value="@item.title" style="display:none;" />
-                        
+                        <input type="text" id="domainCheckId" name="CheckId" value="@item.id" style="display:none;" />
                         <button type="submit">Add Your Playlist</button>
                     </form>
                     <button onclick="openList(event)" data-id="@item.id">More</button>
@@ -68,7 +68,7 @@
             </div>
         }
     </div>
-    
+
 </body>
 <script>
 

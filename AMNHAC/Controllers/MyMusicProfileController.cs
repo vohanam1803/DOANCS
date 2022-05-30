@@ -45,8 +45,6 @@ namespace AMNHAC.Controllers
                 ViewBag.Message = "Your Playlist";
                 return View(videoProfile);
             }
-
-            return View(videoProfile);
         }
         public ActionResult DetelePlaylist(string id)
         {

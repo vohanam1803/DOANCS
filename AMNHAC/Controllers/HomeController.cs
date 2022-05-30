@@ -32,7 +32,7 @@ namespace AMNHAC.Controllers
 
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = "AIzaSyDDefFSi5CM8Ns5PyCsAOGa72qqTrKRRIo",
+                ApiKey = "AIzaSyA044O5L7G9VVMeAIxytPrqOMoUaa6v6_o",
                 ApplicationName = this.GetType().ToString()
             });
 
@@ -61,7 +61,7 @@ namespace AMNHAC.Controllers
                         {
                             vs.title = searchResult.Snippet.Title;
                             vs.id = searchResult.Id.VideoId;
-                            vs.link = searchResult.ETag;
+                            vs.link = searchResult.Snippet.Description;
                             vs.author = searchResult.Snippet.ChannelTitle;
                         }
 
@@ -181,35 +181,47 @@ namespace AMNHAC.Controllers
         {
             List<Video> vs = new List<Video>();
             var vk = new Video();
-
+            //Get tên bài hát muốn thêm vào
             vk.title = form["Id"];
+
+            //Get id bài hát kiểm tra có bị trùng trong data ko
+            vk.id = form["CheckId"];
+            var checkId = data.Videos.Where(m => m.id == vk.id).FirstOrDefault();
+
             //Youtube API
-
-
             test = await searchObject.RunYouTube(vk.title);
             vs = new List<Video>(test);
-            /*for(var item =0;item < test.Count;item++)
-            {
-                vk.title = test[item].title;
-                vk.id = test[item].id;
-                vk.author = test[item].author;
 
-            }*/
             for (var item = 0; item < test.Count; item++)
             {
+
                 vs[item].title = test[item].title;
                 vs[item].id = test[item].id;
                 vs[item].author = test[item].author;
                 vs[item].link = test[item].link;
-                if (vk.title == vs[item].title)
+
+             
+                if(checkId == default)
                 {
-                    data.Videos.InsertOnSubmit(vs[item]);
+                    if (vk.title == vs[item].title)
+                    {
+                        data.Videos.InsertOnSubmit(vs[item]);
+                    }
                 }
+                else
+                {
+                    ViewBag.Check = "This Have In Your PlayList !!";
+                    return View("~/Views/Home/Create.cshtml",test);
+                }
+                
+
+
             }
             data.SubmitChanges();
             //Sổ danh sách 
             var all_list = data.Videos.ToList();
-            if(all_list.Count == 0)
+
+            if (all_list.Count == 0)
             {
                 ViewBag.Message = "You Not Have Anything In Playlist";
                 return View(all_list);
@@ -219,14 +231,14 @@ namespace AMNHAC.Controllers
                 ViewBag.Message = "Your Playlist";
                 return View(all_list);
             }
-            
+
         }
 
 
         public ActionResult DetelePlaylist(string id)
         {
             var D_playlist = data.Videos.Where(m => m.id == id).First();
-            return View();
+            return View("~/Views/MyMusicProfile/Index.cshtml");
         }
         [HttpPost]
         public ActionResult DetelePlaylist(string id, FormCollection collection)
@@ -234,7 +246,17 @@ namespace AMNHAC.Controllers
             var D_playlist = data.Videos.Where(m => m.id == id).First();
             data.Videos.DeleteOnSubmit(D_playlist);
             data.SubmitChanges();
-            return RedirectToAction("Test");
+            var AfterD = data.Videos.ToList();
+            if (AfterD.Count == 0)
+            {
+                ViewBag.Message = "You Not Have Anything In Playlist";
+                return View("~/Views/MyMusicProfile/Index.cshtml", AfterD);
+            }
+            else
+            {
+                ViewBag.Message = "Your Playlist";
+                return View("~/Views/MyMusicProfile/Index.cshtml", AfterD);
+            }
         }
     }
 }
