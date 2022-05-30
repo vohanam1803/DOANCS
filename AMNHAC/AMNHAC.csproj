@@ -272,11 +272,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Facebook.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\link.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Video.cs" />
-    <Compile Include="Models\VideoCF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

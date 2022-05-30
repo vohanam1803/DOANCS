@@ -37,7 +37,7 @@ namespace AMNHAC.Controllers
         {
             var currentClaims = await UserManager.GetClaimsAsync(HttpContext.User.Identity.GetUserId());
 
-            var accesstoken = "EAAIR22nv6uEBAIEiX3jxZCfhK0hYGTXgM2mHJsE1iaOBId4QvGE150ZAjgqNdXt6IiqeZCk7mhhPDeNvC8ZBHjwY6ieIfuhCylDw2WXmLnU1ehKaXMue7nZAugLOjEKezrFRVR2vVsIuExNe51oOTN3mYaan6ZAOEDkw6uJC4GInt88tChJp7TeOZBLklXZBptnUGIL8PKKmewZDZD";  //currentClaims.FirstOrDefault(x => x.Type == "urn:tokens:facebook")
+            var accesstoken = currentClaims.FirstOrDefault(x => x.Type == "urn:tokens:facebook");  //currentClaims.FirstOrDefault(x => x.Type == "urn:tokens:facebook")
 
             if (accesstoken == null)
             {

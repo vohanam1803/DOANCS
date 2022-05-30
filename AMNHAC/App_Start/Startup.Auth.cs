@@ -6,6 +6,9 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using AMNHAC.Models;
+using System.Configuration;
+using Microsoft.Owin.Security.Facebook;
+using System.Threading.Tasks;
 
 namespace AMNHAC
 {
@@ -54,9 +57,29 @@ namespace AMNHAC
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            app.UseFacebookAuthentication(
-               appId: "582584026262241",
-               appSecret: "a2c0ace1ca5da0e5c6138c53d76ef32f");
+            var facebookAuthenticationOptions = new FacebookAuthenticationOptions()
+            {
+                AppId = ConfigurationManager.AppSettings["FacebookAppId"],
+                AppSecret = ConfigurationManager.AppSettings["FacebookAppSecret"],
+                Provider = new FacebookAuthenticationProvider()
+                {
+                    OnAuthenticated = context =>
+                    {
+                        context.Identity.AddClaim(new System.Security.Claims.Claim("urn:tokens:facebook", context.AccessToken));
+
+                        return Task.FromResult(0);
+                    }
+                },
+                SignInAsAuthenticationType = DefaultAuthenticationTypes.ExternalCookie,
+                SendAppSecretProof = true
+            };
+
+            facebookAuthenticationOptions.Scope.Add("email");
+
+            app.UseFacebookAuthentication(facebookAuthenticationOptions);
+            //app.UseFacebookAuthentication(
+            //   appId: ConfigurationManager.AppSettings["FacebookAppId"],
+            //   appSecret: ConfigurationManager.AppSettings["FacebookAppSecret"]);
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

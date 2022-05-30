@@ -333,6 +333,12 @@ namespace AMNHAC.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    var user = await UserManager.FindAsync(loginInfo.Login);
+                    if (user!= null)
+                    {
+                        await StoreClaimsTokens(user);
+                        await SignInAsync(user, isPersistent: false);
+                    }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -345,6 +351,35 @@ namespace AMNHAC.Controllers
                     ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
                     return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
             }
+        }
+
+        private async Task StoreClaimsTokens(ApplicationUser user)
+        {
+            ClaimsIdentity claimsIdentity = await AuthenticationManager.GetExternalIdentityAsync(DefaultAuthenticationTypes.ExternalCookie);
+
+            if (claimsIdentity != null)
+            {
+                var currentClaims = await UserManager.GetClaimsAsync(user.Id);
+
+                var tokenClaims = claimsIdentity.Claims.Where(c => c.Type.StartsWith("urn:tokens:"));
+
+                foreach(var tokenClaim in tokenClaims)
+                {
+                    var currentClaim = currentClaims.SingleOrDefault(x => x.Type == tokenClaim.Type);
+                    if (currentClaims !=null)
+                    {
+                        await UserManager.RemoveClaimAsync(user.Id, currentClaim);
+                    }
+
+                    await UserManager.AddClaimAsync(user.Id, tokenClaim);
+                }
+            }
+        }
+
+        private async Task SignInAsync(ApplicationUser user, bool isPersistent)
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
+            AuthenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, await user.GenerateUserIdentityAsync(UserManager));
         }
 
         //
@@ -374,7 +409,9 @@ namespace AMNHAC.Controllers
                     result = await UserManager.AddLoginAsync(user.Id, info.Login);
                     if (result.Succeeded)
                     {
-                        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                        await StoreClaimsTokens(user);
+                        await SignInAsync(user, isPersistent: false);
+                        //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                         return RedirectToLocal(returnUrl);
                     }
                 }
