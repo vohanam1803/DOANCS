@@ -2,16 +2,41 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
   <DataContextMoniker Name="/DataClasses1DataContext" />
   <nestedChildShapes>
-    <classShape Id="68ab2b37-8b2a-4020-b662-d957e93f3156" absoluteBounds="3.625, 1.25, 2, 1.7708968098958331">
+    <classShape Id="68ab2b37-8b2a-4020-b662-d957e93f3156" absoluteBounds="4.75, 1.125, 2, 1.7708968098958331">
       <DataClassMoniker Name="/DataClasses1DataContext/Playlist" />
       <nestedChildShapes>
-        <elementListCompartment Id="b692ca61-dc3d-432a-8ac0-036784e1cc88" absoluteBounds="3.6399999999999997, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b692ca61-dc3d-432a-8ac0-036784e1cc88" absoluteBounds="4.765, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="55969f26-1e58-463c-85bd-9ab25ee0d6ff" absoluteBounds="6.375, 1.875, 2, 1.7708968098958331">
+    <classShape Id="55969f26-1e58-463c-85bd-9ab25ee0d6ff" absoluteBounds="5.375, 2.875, 2, 1.7708968098958331">
       <DataClassMoniker Name="/DataClasses1DataContext/Video" />
       <nestedChildShapes>
-        <elementListCompartment Id="58c24821-fa70-4318-9c7b-ec4db045861c" absoluteBounds="6.39, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="58c24821-fa70-4318-9c7b-ec4db045861c" absoluteBounds="5.39, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="79df3849-a37c-4e08-8206-44195808d8c2" absoluteBounds="0.5, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClasses1DataContext/Theloai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3c6d97d-2b37-484f-aa10-e738e76b962f" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4275c835-e8c7-4b50-8605-9b0fb9887cba" absoluteBounds="2.375, 1.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e890abf2-a434-4467-b16c-a0e3fec3d85a" absoluteBounds="2.39, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.4374995 : 1.69399251302083); (1.4374995 : 2.76044840494792); (2.375 : 2.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Theloai/Theloai_Person" />
+      <nodes>
+        <classShapeMoniker Id="79df3849-a37c-4e08-8206-44195808d8c2" />
+        <classShapeMoniker Id="4275c835-e8c7-4b50-8605-9b0fb9887cba" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="37032fca-a8d9-4bb5-8cc0-0efe978e05e1" absoluteBounds="6.75, 0.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DataClasses1DataContext/AspNetUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d47a1995-f784-4aa4-a86c-53b9d4634f6f" absoluteBounds="6.7650000000000006, 1.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

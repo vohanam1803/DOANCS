@@ -1,0 +1,18 @@
+USE AMNHAC
+GO
+
+CREATE TABLE Theloai(
+	idTheloai INT IDENTITY PRIMARY KEY,
+	nameTheloai NVARCHAR(255) NOT NULL,
+	
+);
+CREATE TABLE Person(
+	idPerson INT IDENTITY PRIMARY KEY,
+	namePerson NVARCHAR(255) NOT NULL,
+	Mota NVARCHAR(MAX),
+	hinhPerson NVARCHAR(255),
+	idTheloai INT NOT NULL,
+);
+
+ALTER TABLE Person ADD CONSTRAINT fk_ps FOREIGN KEY (idTheloai) REFERENCES Theloai(idTheloai);
+SELECT * FROM Person

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -98,11 +99,26 @@ namespace AMNHAC.Controllers
 
         SearchYouTube searchObject = new SearchYouTube();
         List<Video> test = new List<Video>();
+        //
+        private List<Person> GetPerson()
+        {
+            List<Person> person = new List<Person>();
+            person = data.Persons.ToList();
+            return person;
+        }
+        private List<Video> GetVideo()
+        {
+            List<Video> video = new List<Video>();
+            video = data.Videos.ToList();
+            return video;
+        }
+        //
         public ActionResult Index()
         {
-
-
-            return View();
+            dynamic mymodel = new ExpandoObject();
+            mymodel.person = GetPerson();
+            mymodel.video = GetVideo();
+            return View(mymodel);
         }
 
         [HttpGet]

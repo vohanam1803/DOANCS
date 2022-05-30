@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using AMNHAC.Models;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,9 @@ namespace AMNHAC.Controllers
     [Authorize]
     public class MyMusicProfileController : Controller
     {
+
+        DataClasses1DataContext data = new DataClasses1DataContext();
+
         private ApplicationUserManager _userManager;
         public ApplicationUserManager UserManager
         {
@@ -30,7 +34,32 @@ namespace AMNHAC.Controllers
         // GET: MyMusicProfile
         public ActionResult Index()
         {
+            var videoProfile = data.Videos.ToList();
+            if (videoProfile.Count == 0)
+            {
+                ViewBag.Message = "You Not Have Anything In Playlist";
+                return View(videoProfile);
+            }
+            else
+            {
+                ViewBag.Message = "Your Playlist";
+                return View(videoProfile);
+            }
+
+            return View(videoProfile);
+        }
+        public ActionResult DetelePlaylist(string id)
+        {
+            var D_playlist = data.Videos.Where(m => m.id == id).First();
             return View();
+        }
+        [HttpPost]
+        public ActionResult DetelePlaylist(string id, FormCollection collection)
+        {
+            var D_playlist = data.Videos.Where(m => m.id == id).First();
+            data.Videos.DeleteOnSubmit(D_playlist);
+            data.SubmitChanges();
+            return RedirectToAction("Test");
         }
 
         public async Task<ActionResult> Post()
