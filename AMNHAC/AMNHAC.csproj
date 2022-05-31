@@ -293,7 +293,6 @@
     <Content Include="Content\css\header.css" />
     <Content Include="Content\css\ticket.css" />
     <Content Include="Content\css\trangchu.css" />
-    <Content Include="Content\images\281389609_948049609200754_1917369959228809736_n.jpg" />
     <Content Include="Content\images\AnhNhacViet.png" />
     <Content Include="Content\images\avatar.jpg" />
     <Content Include="Content\images\JK1.jpg" />
@@ -381,6 +380,7 @@
     <Content Include="Views\Discover\IndexDiscover.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\MyMusicProfile\Post.cshtml" />
+    <Content Include="Views\Discover\VideoPlay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

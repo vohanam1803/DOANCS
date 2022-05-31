@@ -24,7 +24,6 @@ namespace AMNHAC.Controllers
     {
         public int ID { get; set; }
 
-
         public async Task<List<Video>> RunYouTube(string timkiem)
         {
             List<Video> vk = new List<Video>();
@@ -78,25 +77,18 @@ namespace AMNHAC.Controllers
                         break;
                 }
             }
-
             Console.WriteLine(String.Format("Videos:\n{0}\n", string.Join("\n", videos)));
             Console.WriteLine(String.Format("Channels:\n{0}\n", string.Join("\n", channels)));
             Console.WriteLine(String.Format("Playlists:\n{0}\n", string.Join("\n", playlists)));
 
             return vk;
         }
-
-
-        /////////////////
+   /////////////////
     }
 
     public class HomeController : Controller
     {
-
-
-
         DataClasses1DataContext data = new DataClasses1DataContext();
-
         SearchYouTube searchObject = new SearchYouTube();
         List<Video> test = new List<Video>();
         //
@@ -131,16 +123,10 @@ namespace AMNHAC.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(FormCollection form)
         {
-
-
             var vk = new Video();
             vk.title = form["Id"];
             //Youtube API
-
-
             test = await searchObject.RunYouTube(vk.title);
-
-
 
             if (vk.title != "")
             {
@@ -200,7 +186,6 @@ namespace AMNHAC.Controllers
                 vs[item].author = test[item].author;
                 vs[item].link = test[item].link;
 
-             
                 if(checkId == default)
                 {
                     if (vk.title == vs[item].title)
@@ -213,9 +198,6 @@ namespace AMNHAC.Controllers
                     ViewBag.Check = "This Have In Your PlayList !!";
                     return View("~/Views/Home/Create.cshtml",test);
                 }
-                
-
-
             }
             data.SubmitChanges();
             //Sổ danh sách 

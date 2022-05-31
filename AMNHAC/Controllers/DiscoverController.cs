@@ -20,18 +20,20 @@ namespace AMNHAC.Controllers
         // GET: Discover
 
         DataClasses1DataContext data = new DataClasses1DataContext();
-        
+
         public ActionResult IndexDiscover()
         {
-            /*var all_list = cf.Videos.ToList();
-            SearchYouTube searchObject = new SearchYouTube();*/
-            
 
-            var all_playlist  = from ss in data.Playlists select ss;
-            
+
+            var all_playlist = from ss in data.Playlists select ss;
+
             return View(all_playlist);
         }
-       
 
+
+        public ActionResult VideoPlay()
+        {
+            return View();
+        }
     }
 }
