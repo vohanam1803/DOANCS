@@ -70,7 +70,7 @@ namespace AMNHAC.Controllers
             {
                 return (new HttpStatusCodeResult(HttpStatusCode.NotFound, "Token not found"));
             }
-            string url = String.Format("https://graph.facebook.com/v14.0/me?fields=id,name,picture,email&access_token={0}", accesstoken);
+            string url = String.Format("https://graph.facebook.com/v14.0/me?fields=id,name,picture,email&access_token={0}", accesstoken.Value);
             HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
 
             request.Method = "GET";

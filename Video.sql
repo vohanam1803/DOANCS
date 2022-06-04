@@ -1,10 +1,11 @@
 USE AMNHAC
 GO
 CREATE TABLE Video(
-	id NVARCHAR(255) NOT NULL,
+	id NVARCHAR(255) PRIMARY KEY NOT NULL,
     title NVARCHAR(255) NOT NULL,
     author NVARCHAR(150),
 	link NVARCHAR(255),
-    hinh Image,
+    vitrivideo NVARCHAR(50),
+	loaivideo NVARCHAR(50),
 );
 SELECT * FROM Video

@@ -28,16 +28,15 @@ namespace AMNHAC.Controllers
         {
             List<Video> vk = new List<Video>();
 
-
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = "AIzaSyA044O5L7G9VVMeAIxytPrqOMoUaa6v6_o",
+                ApiKey = "AIzaSyDeD4tyKV8uEXYYDnIKYKwSfO_Vd0bkCoo",
                 ApplicationName = this.GetType().ToString()
             });
 
             var searchListRequest = youtubeService.Search.List("snippet");
             searchListRequest.Q = timkiem; // Replace with your search term.
-            searchListRequest.MaxResults = 5;
+            searchListRequest.MaxResults = 6;
 
             // Call the search.list method to retrieve results matching the specified query term.
             var searchListResponse = await searchListRequest.ExecuteAsync();
@@ -83,14 +82,18 @@ namespace AMNHAC.Controllers
 
             return vk;
         }
-   /////////////////
+        /////////////////
     }
+
 
     public class HomeController : Controller
     {
         DataClasses1DataContext data = new DataClasses1DataContext();
         SearchYouTube searchObject = new SearchYouTube();
         List<Video> test = new List<Video>();
+
+
+
         //
         private List<Person> GetPerson()
         {
@@ -98,18 +101,46 @@ namespace AMNHAC.Controllers
             person = data.Persons.ToList();
             return person;
         }
-        private List<Video> GetVideo()
+        private async Task<List<Video>> GetVideoAsyncTQ()
         {
+            int a = 0;
+            test = await searchObject.RunYouTube("火爆的中国抖音音乐 2022");
             List<Video> video = new List<Video>();
-            video = data.Videos.ToList();
+            video = test;
+            for (var item = 0; item < video.Count; item++)
+            {
+                video[item].vitrivideo = video[item].id + a;
+                video[item].loaivideo = "1" + a;
+                a++;
+            }
+            return video;
+
+        }
+        private async Task<List<Video>> GetVideoAsyncVN()
+        {
+            int a = 0;
+
+            test = await searchObject.RunYouTube("Nhạc Hot Việt Nam 2022");
+            List<Video> video = new List<Video>();
+            video = test;
+            for (var item = 0; item < video.Count; item++)
+            {
+                video[item].vitrivideo = video[item].id + a;
+                video[item].loaivideo = "2" + a;
+                a++;
+            }
             return video;
         }
         //
-        public ActionResult Index()
+        [HttpGet]
+
+        public async Task<ActionResult> Index()
         {
+
             dynamic mymodel = new ExpandoObject();
             mymodel.person = GetPerson();
-            mymodel.video = GetVideo();
+            mymodel.videoTQ = await GetVideoAsyncTQ();
+            mymodel.videoVN = await GetVideoAsyncVN();
             return View(mymodel);
         }
 
@@ -123,6 +154,7 @@ namespace AMNHAC.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(FormCollection form)
         {
+
             var vk = new Video();
             vk.title = form["Id"];
             //Youtube API
@@ -185,8 +217,8 @@ namespace AMNHAC.Controllers
                 vs[item].id = test[item].id;
                 vs[item].author = test[item].author;
                 vs[item].link = test[item].link;
-
-                if(checkId == default)
+                vs[item].loaivideo = "user";
+                if (checkId == default)
                 {
                     if (vk.title == vs[item].title)
                     {
@@ -196,7 +228,7 @@ namespace AMNHAC.Controllers
                 else
                 {
                     ViewBag.Check = "This Have In Your PlayList !!";
-                    return View("~/Views/Home/Create.cshtml",test);
+                    return View("~/Views/Home/Create.cshtml", test);
                 }
             }
             data.SubmitChanges();
@@ -213,14 +245,13 @@ namespace AMNHAC.Controllers
                 ViewBag.Message = "Your Playlist";
                 return View(all_list);
             }
-
         }
 
-
-        public ActionResult DetelePlaylist(string id)
+        [HttpGet]
+        public ActionResult DetelePlaylist()
         {
-            var D_playlist = data.Videos.Where(m => m.id == id).First();
-            return View("~/Views/MyMusicProfile/Index.cshtml");
+            var AfterD = data.Videos.ToList();
+            return View("~/Views/MyMusicProfile/Index.cshtml", AfterD);
         }
         [HttpPost]
         public ActionResult DetelePlaylist(string id, FormCollection collection)
@@ -239,6 +270,93 @@ namespace AMNHAC.Controllers
                 ViewBag.Message = "Your Playlist";
                 return View("~/Views/MyMusicProfile/Index.cshtml", AfterD);
             }
+        }
+        [HttpPost]
+        public async Task<ActionResult> AddPlaylist(FormCollection form)
+        {
+            List<Video> vs = new List<Video>();
+            var vk = new Video();
+
+
+            //Get id bài hát kiểm tra có bị trùng trong data ko
+            vk.id = form["CheckId"];
+            var checkId = data.Videos.Where(m => m.id == vk.id).FirstOrDefault();
+
+            test = await GetVideoAsyncTQ();
+            vs = new List<Video>(test);
+
+
+            for (var item = 0; item < test.Count; item++)
+            {
+
+                vs[item].title = test[item].title;
+                vs[item].id = test[item].id;
+                vs[item].author = test[item].author;
+                vs[item].link = test[item].link;
+                vs[item].loaivideo = "admin";
+                if (checkId == default)
+                {
+                    if (vk.id == vs[item].id)
+                    {
+                        data.Videos.InsertOnSubmit(vs[item]);
+                    }
+                }
+                else
+                {
+                    ViewBag.Check = "This Have In Your PlayList !!";
+                    return View("~/Views/Home/Create.cshtml", test);
+                }
+
+            }
+            data.SubmitChanges();
+            //Sổ danh sách 
+            var all_list = data.Videos.ToList();
+            ViewBag.Message = "Your Playlist Have Been Update";
+            return View("~/Views/MyMusicProfile/Index.cshtml", all_list);
+
+        }
+
+        public ActionResult TrangAdmin()
+        {
+           
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult TrangChu()
+        {
+            List<Video> acc = new List<Video>();
+            return View("~/Views/Home/TrangChu.cshtml", acc);
+        }
+        [HttpPost]
+        public async Task<ActionResult> TrangChu(FormCollection form)
+        {
+
+            var vk = new Video();
+            vk.title = form["Id"];
+            //Youtube API
+            test = await searchObject.RunYouTube(vk.title);
+
+            if (vk.title != "")
+            {
+                if (test.Count == 0)
+                {
+                    ViewBag.Message = "Can't find!!!!!";
+                    return View(test);
+                }
+                else
+                {
+                    ViewBag.Message = "Your Search Results!!";
+                    return View(test);
+                }
+
+            }
+            else
+            {
+
+                return View("~/Views/Home/TrangChu.cshtml");
+            }
+
         }
     }
 }

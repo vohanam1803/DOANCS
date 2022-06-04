@@ -277,7 +277,6 @@
     </Compile>
     <Compile Include="Models\Facebook.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\link.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -381,6 +380,8 @@
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\MyMusicProfile\Post.cshtml" />
     <Content Include="Views\Discover\VideoPlay.cshtml" />
+    <Content Include="Views\Home\TrangAdmin.cshtml" />
+    <Content Include="Views\Home\TrangChu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

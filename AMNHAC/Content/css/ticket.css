@@ -86,15 +86,17 @@
         display: flex;
     }
 
+
+
 .modal-container {
     background: #fff;
     width: 900px;
     max-width: calc(100% - 32px);
     min-height: 200px;
-    max-height:500px;
+    max-height: 500px;
     position: relative;
     animation: modalFadeIn ease .5s;
-    overflow:auto;
+    overflow: auto;
 }
 
 .modal-header {

@@ -1,0 +1,117 @@
+﻿@model IEnumerable<AMNHAC.Models.Video>
+@{
+    ViewBag.Title = "TrangChu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TrangChu</h2>
+
+<form action="/Home/TrangChu" method="post">
+    <span class="icon"><i class="fa fa-search"></i></span>
+    <input type="search" name="Id" id="search" placeholder="Search Any Song.." title="Tìm kiếm" style="color:#000" />
+</form>
+
+@*Nhac Trung*@
+<div class="Artist">
+    <section class="Artist-Noidung">
+        <header class="Artist-Tieude">
+            <div class="NhacHoa"><a class="nyued0j lmgha8v" style="--lmgha8v-0:#009DC6">Nhạc Trung</a></div>
+        </header>
+        <div class="Nhac-content">
+            <div class="Nhac-Tieude">
+                <div class="Nhac-Trung">
+                    <picture class="sbgigcn p18r570z" style="--p18r570z-0:56.25%;--p18r570z-1:100%">
+                        <img src="https://ajteducation.com/images/6_C%E1%BB%90_%C4%90%C3%94_/B%E1%BA%AEC_KINH.jpg" alt="Cho những người thích nghe nhạc Hoa" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
+                    </picture><div class="s18w18cd"><h3 class="tnkt7b2 h1yokpfj">Cho những người thích nghe nhạc Hoa</h3></div>
+                </div>
+                <p>Nền âm nhạc phong phú và phổ biến nhất đến từ Trung Hoa!</p>
+            </div>
+            <div class="Nhac-Tieubieu">
+                @foreach (var item in Model)
+                {
+                    <div onclick="openList(event)" data-id="@item.id" style="--Nhac-0:#F8F8F8">
+                        <a class="lcourxo l1kpohop">
+                            <div class="lydohjg">
+                                <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px">
+                                    <img src="https://img.youtube.com/vi/@item.id/maxresdefault.jpg" alt="@item.title" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
+                                </picture><span class="tge85oa e1lai98">@item.title</span><span class="s5fxhr2 e1lai98">
+                                    @item.author
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                    <div class="modal js-modal" onclick="closeAllList(event)" id="@item.id">
+                        <div class="modal-container js-modal-container">
+                            <div class="modal-close js-modal-close" onclick="closeList(event)" data-id="@item.id">
+                                <i class="fa fa-times"></i>
+                            </div>
+
+                            <header class="modal-header">
+                                <div class="Lyrics-form ">
+                                    <i class="modal-heading-icon fa fa-info"></i>
+                                    <h1 class="Lyrics-title">@item.title</h1>
+                                </div>
+
+                            </header>
+
+                            <div class="modal-body">
+                                <div class="Lyrics">
+                                    <p class="Lyrics-info">
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <div style="color:black;">
+                                            @item.link
+                                        </div>
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <footer class="modal-footer">
+                                <p class="modal-help text-black">Need <a href="">help?</a></p>
+                            </footer>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function openList(e) {
+        var id = e.currentTarget.getAttribute('data-id')
+        showBuyTickets(id)
+
+
+    }
+    function closeList(e) {
+        var id = e.currentTarget.getAttribute('data-id')
+        hideBuyTickets(id)
+
+    }
+    function closeAllList(e) {
+        var id = e.currentTarget.getAttribute('id')
+        hideBuyTickets(id)
+    }
+
+
+
+
+    function showBuyTickets(id) {
+        const modal = document.getElementById(id)
+        modal.classList.add('open')
+
+    }
+    function hideBuyTickets(id) {
+        const modal = document.getElementById(id)
+        modal.classList.remove('open')
+    }
+
+
+</script>

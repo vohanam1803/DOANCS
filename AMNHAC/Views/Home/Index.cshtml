@@ -21,28 +21,8 @@
         </header>
     </section>
 
-    
-    @*<div class="dau2">
 
-            <div class="khung">
 
-                <div class="tieude" style=" padding: 10px 5px;">
-                    <h2 class="chutieude">YOUR SONG</h2>
-                </div>
-            </div>
-            <div class="khung">
-                <div class="tieude">
-                    <div class="tieude">
-                        <img width="100" height="100" src="https://img.youtube.com/vi/PNajbdtPvRc/maxresdefault.jpg" title="YouTube video player" />
-                    </div>
-                    <h2 class="chutieude">
-
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/PNajbdtPvRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                    </h2>
-                </div>
-            </div>
-        </div>*@
     @*Nhac Trung*@
     <div class="Artist">
         <section class="Artist-Noidung">
@@ -59,9 +39,9 @@
                     <p>Nền âm nhạc phong phú và phổ biến nhất đến từ Trung Hoa!</p>
                 </div>
                 <div class="Nhac-Tieubieu">
-                    @foreach (Video video in Model.video)
+                    @foreach (Video video in Model.videoTQ)
                     {
-                        <div class="Nhac" onclick="openVideo(event)" data-id="@video.id" style="--Nhac-0:#F8F8F8">
+                        <div id="@video.loaivideo" onclick="openVideo(event)" data-id="@video.id" name="@video.loaivideo" set-videoplay="@video.vitrivideo" style="--Nhac-0:#F8F8F8">
                             <a class="lcourxo l1kpohop">
                                 <div class="lydohjg">
                                     <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px">
@@ -72,6 +52,11 @@
                                 </div>
                             </a>
                         </div>
+
+                        <form action="/Home/AddPlaylist" method="post">
+                            <input type="text" id="domainCheckId" name="CheckId" value="@video.id" style="display:none;" />
+                            <button type="submit" style="color:black;">Add Your Playlist</button>
+                        </form>
 
                         <div class="modal js-modal" onclick="closeVideo(event)" id="@video.id">
                             <div class="modal-container js-modal-container">
@@ -91,7 +76,84 @@
                                     <div class="Lyrics">
                                         <p class="Lyrics-info">
 
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/@video.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe id="@video.vitrivideo" width="560" height="315" src="https://www.youtube.com/embed/@video.id?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <div style="color:black;">
+                                                @video.link
+                                            </div>
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                                <footer class="modal-footer">
+                                    <p class="modal-help text-black">Need <a href="">help?</a></p>
+                                </footer>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @*Nhac Viet*@
+    <div class="Artist">
+        <section class="Artist-Noidung">
+            <header class="Artist-Tieude">
+                <div class="NhacHoa"><a class="nyued0j lmgha8v" style="--lmgha8v-0:#009DC6">Nhạc Việt</a></div>
+            </header>
+            <div class="Nhac-content">
+                <div class="Nhac-Tieude">
+
+                    <div class="Nhac-Trung">
+                        <picture class="sbgigcn p18r570z" style="--p18r570z-0:56.25%;--p18r570z-1:100%">
+                            <img src="~/Content/images/AnhNhacViet.png" alt="Cho những người thích nghe nhạc Hoa" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
+                        </picture><div class="s18w18cd"><h3 class="tnkt7b2 h1yokpfj">Cho những người thích nghe nhạc Việt</h3></div>
+                    </div>
+                    <p>Nền âm nhạc phong phú và phổ biến nhất đến từ Vpop!</p>
+                </div>
+
+                <div class="Nhac-Tieubieu">
+                    @foreach (Video video in Model.videoVN)
+                    {
+                        <div id="@video.loaivideo" onclick="openVideo(event)" data-id="@video.id" name="@video.loaivideo" set-videoplay="@video.vitrivideo" style="--Nhac-0:#F8F8F8">
+                            <a class="lcourxo l1kpohop">
+                                <div class="lydohjg">
+                                    <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px">
+                                        <img src="https://img.youtube.com/vi/@video.id/maxresdefault.jpg" alt="@video.title" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
+                                    </picture><span class="tge85oa e1lai98">@video.title</span><span class="s5fxhr2 e1lai98">
+                                        @video.author
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <form action="/Home/AddPlaylist" method="post">
+                            <input type="text" id="domainCheckId" name="CheckId" value="@video.id" style="display:none;" />
+                            <button type="submit" style="color:black;">Add Your Playlist</button>
+                        </form>
+
+                        <div class="modal js-modal" onclick="closeVideo(event)" id="@video.id">
+                            <div class="modal-container js-modal-container">
+                                <div class="modal-close js-modal-close" onclick="closeallVideo(event)" data-id="@video.id">
+                                    <i class="fa fa-times"></i>
+                                </div>
+
+                                <header class="modal-header">
+                                    <div class="Lyrics-form ">
+                                        <i class="modal-heading-icon fa fa-info"></i>
+                                        <h1 class="Lyrics-title">@video.title</h1>
+                                    </div>
+
+                                </header>
+
+                                <div class="modal-body">
+                                    <div class="Lyrics">
+                                        <p class="Lyrics-info">
+
+                                            <iframe id="@video.vitrivideo" width="560" height="315" src="https://www.youtube.com/embed/@video.id?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <div style="color:black;">
                                                 @video.link
                                             </div>
@@ -113,18 +175,66 @@
         </section>
     </div>
     <script>
+        let playY;
+        let giuPlayer;
+
+        let giu;
+        let check = 0;
         function openVideo(e) {
             var id = e.currentTarget.getAttribute('data-id')
-            showBuyTickets(id)
+            var name = e.currentTarget.getAttribute('name')
+
+            var PlayBtn = e.currentTarget.getAttribute('set-videoplay')
+            var Player = document.getElementById(PlayBtn);
+
+            if (check == 0) {
+                if (giu != name) {
+                    showNhac(name)
+                    showBuyTickets(id)
+
+                    playY = Player.src += 'rel=0&autoplay=1'
+                    Player.src = playY;
+                    giuPlayer = Player;
+
+                    giu = name;
+                    check = 1;
+                }
+            }
+            else {
+                hideNhac(giu)
+
+                var PlayerClose = giuPlayer;
+                if (PlayerClose == Player) {
+                    showNhac(name)
+                    showBuyTickets(id)
+                    giu = name;
+                }
+                else {
+                    playY = giuPlayer.src.replace('rel=0&autoplay=1', '');
+                    giuPlayer.src = playY;
+
+                    showNhac(name)
+                    showBuyTickets(id)
+
+                    playY = Player.src += 'rel=0&autoplay=1'
+                    Player.src = playY;
+                    giuPlayer = Player;
+
+                    giu = name;
+                }
+            }
         }
         function closeVideo(e) {
             var id = e.currentTarget.getAttribute('id')
+
             hideBuyTickets(id)
         }
         function closeallVideo(e) {
             var id = e.currentTarget.getAttribute('data-id')
+
             hideBuyTickets(id)
         }
+
         function showBuyTickets(id) {
             const modal = document.getElementById(id)
             modal.classList.add('open')
@@ -133,75 +243,15 @@
             const modal = document.getElementById(id)
             modal.classList.remove('open')
         }
+        function showNhac(name) {
+            const Nhac = document.getElementById(name)
+            Nhac.classList.add('Nhac')
+        }
+        function hideNhac(check) {
+            const Nhac = document.getElementById(check)
+            Nhac.classList.remove('Nhac')
+        }
     </script>
-    @*Nhac Viet*@
-    <div class="Artist">
-        <section class="Artist-Noidung">
-            <header class="Artist-Tieude">
-                <div class="NhacHoa"><a class="nyued0j lmgha8v" style="--lmgha8v-0:#009DC6">Nhạc Việt</a></div>
-            </header>
-            <div class="Nhac-content">
-                <div class="Nhac-Tieude">
-
-                    <div class="Nhac-Trung">
-                        <picture class="sbgigcn p18r570z" style="--p18r570z-0:56.25%;--p18r570z-1:100%">
-                            <img src="~/Content/images/AnhNhacViet.png" alt="Cho những người thích nghe nhạc Hoa" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
-                        </picture><div class="s18w18cd"><h3 class="tnkt7b2 h1yokpfj">Cho những người thích nghe nhạc Việt</h3></div>
-                    </div>
-                    <p>Nền âm nhạc phong phú và phổ biến nhất đến từ Vpop!</p>
-                </div><div class="Nhac-Tieubieu">
-                    <div class="Nhac" style="--Nhac-0:#F8F8F8">
-                        <a class="lcourxo l1kpohop">
-                            <div class="lydohjg">
-                                <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px">
-                                    <img src="https://i.ytimg.com/vi/ftxfutOAjss/mqdefault.jpg" alt="Nhiều người - Red Sun in the Sky" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
-                                </picture><span class="tge85oa e1lai98">Nhiều người - Red Sun in the Sky</span><span class="s5fxhr2 e1lai98">
-                                    1,402M<!-- --> <!-- -->Phím<!-- -->&nbsp;·&nbsp;<!-- -->Hợp âm<!-- -->
-                                </span>
-                            </div>
-                        </a>
-                    </div><div class="Nhac" style="--Nhac-0:#FFFFFF">
-                        <a class="lcourxo l1kpohop">
-                            <div class="lydohjg">
-                                <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px"><img src="https://i.ytimg.com/vi/AqPk7YYHt1Y/hqdefault.jpg" alt="Lưu Y Đóa - Túy Hồng Nhan" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF"></picture><span class="tge85oa e1lai98">Lưu Y Đóa - Túy Hồng Nhan</span>
-                                <span class="s5fxhr2 e1lai98">
-                                    14555<!-- --> <!-- -->Phím<!-- -->&nbsp;·&nbsp;<!-- -->Hợp âm<!-- -->
-                                </span>
-                            </div>
-                        </a>
-                    </div><div class="Nhac" style="--Nhac-0:#F8F8F8">
-                        <a class="lcourxo l1kpohop">
-                            <div class="lydohjg">
-                                <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px"><img src="https://i.ytimg.com/vi/W-MihXf7Y2c/maxresdefault.jpg" alt="Trương Hàm Vận - 1 Triệu khả năng" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF"></picture>
-                                <span class="tge85oa e1lai98">Trương Hàm Vận - 1 Triệu khả năng</span><span class="s5fxhr2 e1lai98">
-                                    56224<!-- --> <!-- -->Phím<!-- -->&nbsp;·&nbsp;<!-- -->Hợp âm<!-- -->
-                                </span>
-                            </div>
-                        </a>
-                    </div><div class="Nhac" style="--Nhac-0:#FFFFFF">
-                        <a class="lcourxo l1kpohop">
-                            <div class="lydohjg">
-                                <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px"><img src="https://i.ytimg.com/vi/Iz02QowXvbw/maxresdefault.jpg" alt="A Du Du - Một giấc mộng xưa" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF"></picture><span class="tge85oa e1lai98">A Du Du - Một giấc mộng xưa</span>
-                                <span class="s5fxhr2 e1lai98">
-                                    4999<!-- --> <!-- -->Phím<!-- -->&nbsp;·&nbsp;<!-- -->Hợp âm<!-- -->
-                                </span>
-                            </div>
-                        </a>
-                    </div><div class="Nhac" style="--Nhac-0:#F8F8F8">
-                        <a class="lcourxo l1kpohop">
-                            <div class="lydohjg">
-                                <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px"><img src="https://i.ytimg.com/vi/P9mqCv1yhBE/maxresdefault.jpg" alt="Ngải Thần - Thời Không Sai Lệch" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF"></picture>
-                                <span class="tge85oa e1lai98">Ngải Thần - Thời Không Sai Lệch</span><span class="s5fxhr2 e1lai98">
-                                    6452<!-- --> <!-- -->Phím<!-- -->&nbsp;·&nbsp;<!-- -->Hợp âm<!-- -->
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
 
 
     @*Nghe Si*@
@@ -405,6 +455,7 @@
     <script>
         function openList(e) {
             var id = e.currentTarget.getAttribute('data-id')
+
             showBuyTickets(id)
         }
         function closeList(e) {

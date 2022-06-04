@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using AMNHAC.Models;
 
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Services;
-using Google.Apis.Upload;
-using Google.Apis.Util.Store;
-using Google.Apis.YouTube.v3;
-using Google.Apis.YouTube.v3.Data;
+
 
 namespace AMNHAC.Controllers
 {
@@ -20,20 +16,50 @@ namespace AMNHAC.Controllers
         // GET: Discover
 
         DataClasses1DataContext data = new DataClasses1DataContext();
+        
 
         public ActionResult IndexDiscover()
         {
 
 
-            var all_playlist = from ss in data.Playlists select ss;
+            var all_playlist = data.Videos.ToList();
 
             return View(all_playlist);
         }
 
-
+        
+       
         public ActionResult VideoPlay()
         {
-            return View();
+            var video = data.Videos.ToList();
+            return View(video);
+        }
+
+        [HttpPost]
+        public ActionResult VideoPlay(FormCollection form)
+        {
+            string id = form["Id"];
+            string value = form["Id1"];
+            var video = data.Videos.ToList();
+            for(var item = 0;item<video.Count;item++)
+            {
+                if(video[item].id == value)
+                {
+                    if (id == "")
+                    {
+
+                        video[item].link = id;
+
+                    }
+                    else
+                    {
+                        video[item].link = id;
+                    }
+                }
+            }
+            
+           
+            return View(video);
         }
     }
 }

@@ -1,55 +1,22 @@
-﻿
-@{
-    ViewBag.Title = "VideoPlay";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@model IEnumerable<AMNHAC.Models.Video>
+
+@foreach (var item in Model)
+{
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id?@item.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <form action="/Discover/VideoPlay" method="post">
+        <input type="text" id="domain" name="Id" value="autoplay=1" style="display:none;" />
+        <input type="text" id="domain1" name="Id1" value="@item.id" style="display:none;" />
+        <button type="submit">Play</button>
+    </form>
+    <form action="/Discover/VideoPlay" method="post">
+        <input type="text" id="domain" name="Id1" value="" style="display:none;" />
+        <input type="text" id="domain1" name="Id1" value="@item.id" style="display:none;" />
+        <button type="submit">Pause</button>
+    </form>
+
+
 }
 
-<h2>VideoPlay</h2>
 
-<div class="video-frame">
-    <iframe id="player2" width="560" height="315" src="https://www.youtube.com/embed/FOEW93azS30" style="display:none;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
 
-<button id="play">Play</button>
-<button id="stop">Stop</button>
-<style>
-    .video-frame {
-        overflow: hidden;
-        margin-bottom: 10px;
-    }
 
-    button {
-        border: none;
-        background-color: #e75252;
-        color: #ffffff;
-        padding: 10px 15px;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-
-        button:focus {
-            outline: 0;
-        }
-
-    #stop {
-        background-color: #ff0002;
-    }
-</style>
-<script>
-    const Player = document.getElementById('player2');
-    const PlayBtn = document.getElementById('play');
-    const stopBtn = document.getElementById('stop');
-    let times = 0, playY;
-    const playVideo = PlayBtn.addEventListener('click', () => {
-        if (times == 0) {
-            playY = Player.src += '?autoplay=1';
-            times = 1;
-        }
-    });
-
-    stopBtn.addEventListener('click', () => {
-        playY = playY.slice(0, -11);
-        Player.src = playY
-        times = 0;
-    });
-</script>
