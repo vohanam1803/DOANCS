@@ -22,6 +22,16 @@
 
                 <div class="option">
 
+                    <form action="/Home/AddPlaylistAdmin" method="post">
+                        <input type="text" id="domain" name="Id" value="@item.title" style="display:none;" />
+                        <input type="text" id="domainCheckId" name="CheckId" value="@item.id" style="display:none;" />
+                        <select name="theloai" class="form-control">
+                            <option value="hoa">Nhạc Hoa</option>
+                            <option value="viet">Nhạc Việt</option>
+                            @*<option value="khac">Nhạc Khác</option>*@
+                        </select>
+                        <button type="submit" style="color:black;">Add Your Playlist Admin In Index</button>
+                    </form>
 
                     <form action="/Home/Test" method="post">
                         <input type="text" id="domain" name="Id" value="@item.title" style="display:none;" />
