@@ -296,8 +296,6 @@ namespace AMNHAC.Models
 		
 		private EntitySet<Person> _Persons;
 		
-		private EntitySet<Video> _Videos;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -311,7 +309,6 @@ namespace AMNHAC.Models
 		public Theloai()
 		{
 			this._Persons = new EntitySet<Person>(new Action<Person>(this.attach_Persons), new Action<Person>(this.detach_Persons));
-			this._Videos = new EntitySet<Video>(new Action<Video>(this.attach_Videos), new Action<Video>(this.detach_Videos));
 			OnCreated();
 		}
 		
@@ -368,19 +365,6 @@ namespace AMNHAC.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Theloai_Video", Storage="_Videos", ThisKey="idTheloai", OtherKey="idTheloai")]
-		public EntitySet<Video> Videos
-		{
-			get
-			{
-				return this._Videos;
-			}
-			set
-			{
-				this._Videos.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -408,18 +392,6 @@ namespace AMNHAC.Models
 		}
 		
 		private void detach_Persons(Person entity)
-		{
-			this.SendPropertyChanging();
-			entity.Theloai = null;
-		}
-		
-		private void attach_Videos(Video entity)
-		{
-			this.SendPropertyChanging();
-			entity.Theloai = this;
-		}
-		
-		private void detach_Videos(Video entity)
 		{
 			this.SendPropertyChanging();
 			entity.Theloai = null;
@@ -1038,12 +1010,6 @@ namespace AMNHAC.Models
 		
 		private string _loaivideo;
 		
-		private System.Nullable<int> _idTheloai;
-		
-		private string _duration;
-		
-		private EntityRef<Theloai> _Theloai;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1060,15 +1026,10 @@ namespace AMNHAC.Models
     partial void OnvitrivideoChanged();
     partial void OnloaivideoChanging(string value);
     partial void OnloaivideoChanged();
-    partial void OnidTheloaiChanging(System.Nullable<int> value);
-    partial void OnidTheloaiChanged();
-    partial void OndurationChanging(string value);
-    partial void OndurationChanged();
     #endregion
 		
 		public Video()
 		{
-			this._Theloai = default(EntityRef<Theloai>);
 			OnCreated();
 		}
 		
@@ -1188,84 +1149,6 @@ namespace AMNHAC.Models
 					this._loaivideo = value;
 					this.SendPropertyChanged("loaivideo");
 					this.OnloaivideoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTheloai", DbType="Int")]
-		public System.Nullable<int> idTheloai
-		{
-			get
-			{
-				return this._idTheloai;
-			}
-			set
-			{
-				if ((this._idTheloai != value))
-				{
-					if (this._Theloai.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidTheloaiChanging(value);
-					this.SendPropertyChanging();
-					this._idTheloai = value;
-					this.SendPropertyChanged("idTheloai");
-					this.OnidTheloaiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_duration", DbType="NVarChar(255)")]
-		public string duration
-		{
-			get
-			{
-				return this._duration;
-			}
-			set
-			{
-				if ((this._duration != value))
-				{
-					this.OndurationChanging(value);
-					this.SendPropertyChanging();
-					this._duration = value;
-					this.SendPropertyChanged("duration");
-					this.OndurationChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Theloai_Video", Storage="_Theloai", ThisKey="idTheloai", OtherKey="idTheloai", IsForeignKey=true)]
-		public Theloai Theloai
-		{
-			get
-			{
-				return this._Theloai.Entity;
-			}
-			set
-			{
-				Theloai previousValue = this._Theloai.Entity;
-				if (((previousValue != value) 
-							|| (this._Theloai.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Theloai.Entity = null;
-						previousValue.Videos.Remove(this);
-					}
-					this._Theloai.Entity = value;
-					if ((value != null))
-					{
-						value.Videos.Add(this);
-						this._idTheloai = value.idTheloai;
-					}
-					else
-					{
-						this._idTheloai = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Theloai");
 				}
 			}
 		}

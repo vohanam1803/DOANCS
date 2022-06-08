@@ -14,7 +14,6 @@
       <Column Name="idTheloai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="nameTheloai" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
       <Association Name="Theloai_Person" Member="Persons" ThisKey="idTheloai" OtherKey="idTheloai" Type="Person" />
-      <Association Name="Theloai_Video" Member="Videos" ThisKey="idTheloai" OtherKey="idTheloai" Type="Video" />
     </Type>
   </Table>
   <Table Name="dbo.Person" Member="Persons">
@@ -58,9 +57,6 @@
       <Column Name="link" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="vitrivideo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="loaivideo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="idTheloai" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="duration" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Association Name="Theloai_Video" Member="Theloai" ThisKey="idTheloai" OtherKey="idTheloai" Type="Theloai" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

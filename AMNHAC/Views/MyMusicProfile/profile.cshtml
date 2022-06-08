@@ -1,0 +1,38 @@
+﻿@model AMNHAC.Models.Facebook
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/css/content.css" rel="stylesheet" />
+<div class="information">
+    <div class="profile">
+        <div class="picture">
+            <img src="@Model.picture.data.url" alt="">
+        </div>
+        <div class="info">
+            <h1 class="name mt-8">@Model.name</h1>
+            <div class="member_type">
+                <i class="fa fa-users mt-8"> Free member </i>
+                <div class="private_profile">
+                    <i class="fa fa-eye-slash mt-8"> Private Profile</i>
+                    <a href="#" class="change_profile mt-8">Change</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="introduce">
+        <div class="intro">“Roses are red, violets are blue. You may not know it, but someone loves you.”</div>
+    </div>
+</div>
+<div class="taskbar mg-16 pd-12">
+    <ul class="task">
+        <li class="task_logo"><a href="/MyMusicProfile/Index"><i class="fa fa-list"></i><br>Playlist</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-pencil"></i><br>Edit</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-upload"></i><br>Upload</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-certificate"></i><br>Badges</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-book"></i><br>History</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-envelope"></i><br>Notification</a></li>
+    </ul>
+</div>
+
