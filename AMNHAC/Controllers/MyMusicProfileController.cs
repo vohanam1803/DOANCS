@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace AMNHAC.Controllers
 {
-    [Authorize]
+   
     public class MyMusicProfileController : Controller
     {
 
@@ -35,17 +35,15 @@ namespace AMNHAC.Controllers
         public ActionResult Index()
         {
             var videoProfile = data.Videos.ToList();
-            var check = from ss in data.Videos where ss.loaivideo == "user" select ss;
-
             if (videoProfile.Count == 0)
             {
                 ViewBag.Message = "You Not Have Anything In Playlist";
-                return View(check);
+                return View(videoProfile);
             }
             else
             {
                 ViewBag.Message = "Your Playlist";
-                return View(check);
+                return View(videoProfile);
             }
         }
         public ActionResult DetelePlaylist(string id)
@@ -61,8 +59,8 @@ namespace AMNHAC.Controllers
             data.SubmitChanges();
             return RedirectToAction("Test");
         }
-
-        public async Task<ActionResult> Post()
+        [Authorize]
+        public async Task<ActionResult> profile()
         {
             var currentClaims = await UserManager.GetClaimsAsync(HttpContext.User.Identity.GetUserId());
 
@@ -84,9 +82,11 @@ namespace AMNHAC.Controllers
                 string result = await reader.ReadToEndAsync();
 
                 dynamic jsonObj = System.Web.Helpers.Json.Decode(result);
+                Models.Facebook facebook = new Models.Facebook(jsonObj);
                 ViewBag.JSON = result;
+
+                return View(facebook);
             }
-            return View();
         }
     }
 }

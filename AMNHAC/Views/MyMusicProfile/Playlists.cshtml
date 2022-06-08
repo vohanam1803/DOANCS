@@ -1,0 +1,28 @@
+﻿@model IEnumerable<AMNHAC.Models.Video>
+@model IEnumerable<AMNHAC.Models.Facebook>
+@{
+    ViewBag.Title = "Playlists";
+    Layout = "~/Views/MyMusicProfile/Index.cshtml";
+}
+
+<h2>Playlists</h2>
+
+<h3 class="title" style="text-align:center;"> @ViewBag.Message </h3>
+@foreach (var item in Model)
+{
+
+    <div class="song">
+        <div class="thumb" style="background-image: url('https://img.youtube.com/vi/@item.id/maxresdefault.jpg') "></div>
+        <div class="body">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3 class="title"> @item.title</h3>
+            <p class="author"> @item.author </p>
+        </div>
+        <form action="/Home/DetelePlaylist" method="post">
+            <input type="text" id="domain" name="Id" value="@item.id" style="display:none;" />
+
+            <button type="submit">Detele From Playlist</button>
+        </form>
+    </div>
+}
+
