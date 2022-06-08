@@ -20,17 +20,17 @@
         <elementListCompartment Id="e890abf2-a434-4467-b16c-a0e3fec3d85a" absoluteBounds="2.39, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.4374995 : 1.69399251302083); (1.4374995 : 2.3749995); (2.375 : 2.3749995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.4374995 : 1.69399251302083); (1.4374995 : 2.3749995); (2.375 : 2.3749995)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/Theloai/Theloai_Person" />
       <nodes>
         <classShapeMoniker Id="79df3849-a37c-4e08-8206-44195808d8c2" />
         <classShapeMoniker Id="4275c835-e8c7-4b50-8605-9b0fb9887cba" />
       </nodes>
     </associationConnector>
-    <classShape Id="37032fca-a8d9-4bb5-8cc0-0efe978e05e1" absoluteBounds="6.75, 0.875, 2, 3.3093082682291666">
+    <classShape Id="37032fca-a8d9-4bb5-8cc0-0efe978e05e1" absoluteBounds="7.875, 0.5, 2, 3.3093082682291666">
       <DataClassMoniker Name="/DataClasses1DataContext/AspNetUser" />
       <nestedChildShapes>
-        <elementListCompartment Id="d47a1995-f784-4aa4-a86c-53b9d4634f6f" absoluteBounds="6.7650000000000006, 1.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d47a1995-f784-4aa4-a86c-53b9d4634f6f" absoluteBounds="7.8900000000000006, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="853ba4d2-c2ab-4fff-857e-06313d872b79" absoluteBounds="0.5, 2.875, 2, 1.1939925130208333">

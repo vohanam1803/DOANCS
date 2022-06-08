@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace AMNHAC.Controllers
 {
-    [Authorize]
+   
     public class MyMusicProfileController : Controller
     {
 
@@ -59,8 +59,8 @@ namespace AMNHAC.Controllers
             data.SubmitChanges();
             return RedirectToAction("Test");
         }
-
-        public async Task<ActionResult> Post()
+        [Authorize]
+        public async Task<ActionResult> profile()
         {
             var currentClaims = await UserManager.GetClaimsAsync(HttpContext.User.Identity.GetUserId());
 
@@ -82,9 +82,11 @@ namespace AMNHAC.Controllers
                 string result = await reader.ReadToEndAsync();
 
                 dynamic jsonObj = System.Web.Helpers.Json.Decode(result);
+                Models.Facebook facebook = new Models.Facebook(jsonObj);
                 ViewBag.JSON = result;
+
+                return View(facebook);
             }
-            return View();
         }
     }
 }

@@ -30,7 +30,7 @@ namespace AMNHAC.Controllers
 
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = "AIzaSyDeD4tyKV8uEXYYDnIKYKwSfO_Vd0bkCoo",
+                ApiKey = "AIzaSyDDefFSi5CM8Ns5PyCsAOGa72qqTrKRRIo",
                 ApplicationName = this.GetType().ToString()
             });
 

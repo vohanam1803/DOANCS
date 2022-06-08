@@ -1063,3 +1063,8 @@ D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Search.dll
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Taxonomy.dll
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.UserProfiles.dll
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.WorkflowServices.dll
+D:\test\DOANCS\AMNHAC\bin\Aspose.HTML.dll
+D:\test\DOANCS\AMNHAC\bin\Aspose.HTML.xml
+D:\test\DOANCS\AMNHAC\obj\Debug\Interop.WMPLib.dll
+D:\test\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.ResolveComReference.cache
+D:\test\DOANCS\AMNHAC\obj\Debug\AMNHAC.Migrations.role.resources
