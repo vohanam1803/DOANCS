@@ -3,7 +3,37 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<link href="~/Content/css/content.css" rel="stylesheet" />
+<div class="information">
+    <div class="profile">
+        <div class="picture">
+            <img src="~/Content/images/avatar.jpg" alt="">
+        </div>
+        <div class="info">
+            <h1 class="name mt-8">Phan Thành Đạt</h1>
+            <div class="member_type">
+                <i class="fa fa-users mt-8"> Free member </i>
+                <div class="private_profile">
+                    <i class="fa fa-eye-slash mt-8"> Private Profile</i>
+                    <a href="#" class="change_profile mt-8">Change</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="introduce">
+        <div class="intro">“Roses are red, violets are blue. You may not know it, but someone loves you.”</div>
+    </div>
+</div>
+<div class="taskbar mg-16 pd-12">
+    <ul class="task">
+        <li class="task_logo"><a href="#"><i class="fa fa-list"></i><br>Playlist</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-pencil"></i><br>Edit</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-upload"></i><br>Upload</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-certificate"></i><br>Badges</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-book"></i><br>History</a></li>
+        <li class="task_logo"><a href="#"><i class="fa fa-envelope"></i><br>Notification</a></li>
+    </ul>
+</div>
 
 
 <h3 class="title" style="text-align:center;"> @ViewBag.Message </h3>
@@ -32,7 +62,7 @@
             <iframe id="@item.id" width="560" height="315" src="https://www.youtube.com/embed/@item.id?controls=0" style="display:none;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3 class="title"> @item.title</h3>
             <p class="author"> @item.author </p>
-           
+
         </div>
 
         @*<button onclick="openList(event)" data-id="@item.id">Play</button>*@

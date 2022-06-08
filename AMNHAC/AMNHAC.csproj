@@ -260,7 +260,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MyMusicProfileController.cs" />
     <Compile Include="Controllers\PlaylistController.cs" />
-    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -268,10 +267,6 @@
     <Compile Include="Migrations\202204270619585_InitialModel.cs" />
     <Compile Include="Migrations\202204270619585_InitialModel.Designer.cs">
       <DependentUpon>202204270619585_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206080550164_role.cs" />
-    <Compile Include="Migrations\202206080550164_role.Designer.cs">
-      <DependentUpon>202206080550164_role.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -283,7 +278,6 @@
     <Compile Include="Models\Facebook.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -384,15 +378,10 @@
     <Content Include="Views\Home\Create.cshtml" />
     <Content Include="Views\Discover\IndexDiscover.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
-    <Content Include="Views\MyMusicProfile\profile.cshtml" />
+    <Content Include="Views\MyMusicProfile\Post.cshtml" />
     <Content Include="Views\Discover\VideoPlay.cshtml" />
     <Content Include="Views\Home\TrangAdmin.cshtml" />
     <Content Include="Views\Home\TrangChu.cshtml" />
-    <Content Include="Views\Role\Index.cshtml" />
-    <Content Include="Views\Role\Create.cshtml" />
-    <Content Include="Views\Role\Edit.cshtml" />
-    <Content Include="Views\Role\Details.cshtml" />
-    <Content Include="Views\Role\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -414,9 +403,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202204270619585_InitialModel.resx">
       <DependentUpon>202204270619585_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206080550164_role.resx">
-      <DependentUpon>202206080550164_role.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
