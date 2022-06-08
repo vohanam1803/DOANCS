@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<AMNHAC.Models.Video>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -35,3 +35,155 @@
     </ul>
 </div>
 
+
+<h3 class="title" style="text-align:center;"> @ViewBag.Message </h3>
+
+<div class="controls">
+
+    <ion-icon name="shuffle-outline" class="play-shuffle"></ion-icon>
+
+    <ion-icon name="play-back" class="play-back"></ion-icon>
+
+    <ion-icon name="play-forward" class="play-forward"></ion-icon>
+
+    <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+
+</div>
+@foreach (var item in Model)
+{
+
+    <div class="song">
+        <div class="thumb" style="background-image: url('https://img.youtube.com/vi/@item.id/maxresdefault.jpg') "></div>
+
+
+
+        <div class="body">
+
+            <iframe id="@item.id" width="560" height="315" src="https://www.youtube.com/embed/@item.id?controls=0" style="display:none;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3 class="title"> @item.title</h3>
+            <p class="author"> @item.author </p>
+
+        </div>
+
+        @*<button onclick="openList(event)" data-id="@item.id">Play</button>*@
+        @*<button onclick="closeList(event)" data-id="@item.id">Stop</button>*@
+        <div class="play" style="color:black;">
+            <div class="player-inner" id="@item.title" onclick="openList(event)" data-id="@item.id">
+                <ion-icon name="play" class="play-icon" id="icon"></ion-icon>
+            </div>
+        </div>
+
+
+        <form action="/Home/DetelePlaylist" method="post">
+            <input type="text" id="domain" name="Id" value="@item.id" style="display:none;" />
+
+            <button type="submit">Detele From Playlist</button>
+        </form>
+
+    </div>
+
+
+}
+
+
+<style>
+    .video-frame {
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    button {
+        border: none;
+        background-color: #e75252;
+        color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+        button:focus {
+            outline: 0;
+        }
+
+    #stop {
+        background-color: #ff0002;
+    }
+</style>
+<script>
+    let playY;
+    let isPlaying = 0, isCheck = 0;
+    let check;
+
+    let layicon;
+    var luuicon;
+
+    var durationTime = document.querySelector(".duration");
+    var remainingTime = document.querySelector(".remaining");
+
+
+    function openList(e) {
+        var PlayBtn = e.currentTarget.getAttribute('data-id')
+        var Player = document.getElementById(PlayBtn);
+
+        var geticon = e.currentTarget.getAttribute('id')
+        var icon = document.getElementById(geticon);
+
+        if (isPlaying == 0) {
+
+            playY = Player.src += '&rel=0&autoplay=1'
+            Player.src = playY;
+            isPlaying = 1;
+            check = Player;
+            luuicon = icon;
+            icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
+
+        }
+        else {
+
+            var PlayerClose = check;
+
+            if (PlayerClose == Player) {
+                icon.innerHTML = `<ion-icon name="play"></ion-icon>`;
+                playY = PlayerClose.src.replace('&rel=0&autoplay=1', '');
+                PlayerClose.src = playY;
+                isPlaying = 0;
+            }
+            else {
+                luuicon.innerHTML = `<ion-icon name="play"></ion-icon>`;
+                playY = PlayerClose.src.replace('&rel=0&autoplay=1', '');
+                PlayerClose.src = playY;
+                isPlaying = 0;
+                ///////////////
+                playY = Player.src += '&rel=0&autoplay=1'
+                Player.src = playY;
+                isPlaying = 1;
+                check = Player;
+                icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
+                luuicon = icon;
+            }
+        }
+
+    }
+
+   @* function closeList(e) {
+        var stopBtn = e.currentTarget.getAttribute('data-id')
+
+        var PlayerClose = document.getElementById(stopBtn);
+        console.log(PlayerClose)
+
+        playY = PlayerClose.src.replace('&rel=0&autoplay=1', '');
+        console.log(playY)
+
+        PlayerClose.src = playY;
+        console.log(PlayerClose.src)
+
+        isPlaying = 0;
+        console.log(isPlaying)
+
+
+    }*@
+
+
+    ///
+
+</script>

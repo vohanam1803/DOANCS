@@ -1,33 +1,73 @@
-<div class="music-content">
-  <button class="play-list">Playlist <i class="fas fa-list"></i></button>
-  <section class="music-content-box">
-    <div class="thumbnail-song"><img src="image/MINHANH.jpg" alt="" /></div>
-    <div class="content-wrapper">
-      <div class="info-song">
-        <p class="song-name">INI - Eluveitie</p>
-        <p class="author">Eluvi</p>
-      </div>
-    </div>
-  </section>
-  <audio id="audio"></audio>
-  <div class="bar-song">
-    <span class="current-time">00:00</span>
-    <div class="progress"><div class="progress-bar"></div></div>
-    <span class="duration-time">03:22</span>
-  </div>
-  <div class="song-footer">
-    <button class="back"><i class="fas fa-step-backward"></i></button>
-    <button class="play-song"><i class="fas fa-play"></i></button>
-    <button class="forward"><i class="fas fa-step-forward"></i></button>
-  </div>
-</div>
+@model IEnumerable<AMNHAC.Models.Playlist>
+@{
 
-<div class="playlist-box">
-  <div class="header">
-    <button class="button go-home">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    <div class="text"><p>Playlist</p></div>
-  </div>
-  <div class="list-song"></div>
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="khung">
+    @foreach (var item in Model)
+    {
+
+        <div class="itxe" style=" padding-right: 450px;">
+            <div class="music" style="max-width: 500px;margin: 0 auto;border-radius: 12px;background-color: white;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;padding: 35px 15px 30px;">
+                <div class="music-thumb">
+                    <img src="@item.hinhmusic" alt="" />
+                </div>
+
+                <audio id="@item.idmusic" controls>
+                    <source src="~/Content/music/@item.link" />
+                </audio>
+
+                
+                <div class="widthrange" style="padding-left: 100px;">
+                    <input type="range" name="range" id="range" class="range" />
+                </div>
+                <div class="timer">
+                    <div class="remaining"></div>
+                    <div class="duration"></div>
+                </div>
+
+                <div class="controls">
+                    <div class="play" onclick="openList(event)" data-id="@item.idmusic">
+                        <div class="player-inner">
+                            <ion-icon name="play" class="play-icon" id="icon"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
 </div>
+<script>
+
+    var isPlaying = true;
+    
+
+    function openList(e) {
+        
+        var id = e.currentTarget.getAttribute('data-id')
+        console.log(id)
+        var mySong = document.getElementById(id)
+        
+        if (isPlaying) {
+            mySong.play()
+            var icon = document.querySelector(".player-inner");
+            icon.innerHTML = `<ion-icon name="pause-circle"></ion-icon>`;
+            isPlaying = false;
+        }
+        else {
+            mySong.pause()
+            var icon = document.querySelector(".player-inner");
+            icon.innerHTML = `<ion-icon name="play"></ion-icon>`;
+            isPlaying = true;;
+        }
+    }
+
+    
+
+</script>
+
+
+
+

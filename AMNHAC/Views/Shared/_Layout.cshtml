@@ -50,14 +50,16 @@
     <header>
         @Html.Partial("~/Views/Header/header.cshtml")
     </header>
-        <div id="content">
-            @RenderBody()
-        </div>
+    <div id="content">
+        @RenderBody()
+
+    </div>
     <footer>
         @Html.Partial("~/Views/Footer/footer.cshtml")
     </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @RenderSection("upload", required: false)
 </body>
 </html>

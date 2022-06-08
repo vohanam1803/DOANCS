@@ -1003,6 +1003,12 @@ D:\DoAnCoSo\DOANCS\AMNHAC\bin\NAudio.Lame.dll
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\NAudio.Lame.pdb
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\YoutubeExtractor.dll
 D:\DoAnCoSo\DOANCS\AMNHAC\bin\YoutubeExtractor.xml
+<<<<<<< HEAD
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\Interop.WMPLib.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\obj\Debug\AMNHAC.csproj.ResolveComReference.cache
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Aspose.HTML.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Aspose.HTML.xml
+=======
 D:\test\DOANCS\AMNHAC\bin\libmp3lame.32.dll
 D:\test\DOANCS\AMNHAC\bin\libmp3lame.64.dll
 D:\test\DOANCS\AMNHAC\bin\Google.Apis.Auth.dll
@@ -1042,3 +1048,18 @@ D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Search.dll
 D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Taxonomy.dll
 D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.UserProfiles.dll
 D:\test\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.WorkflowServices.dll
+>>>>>>> b91953185d6494b4bca886487081ac089c694fe0
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Office.Client.Policy.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Office.Client.TranslationServices.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Office.SharePoint.Tools.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.Online.SharePoint.Client.Tenant.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.ProjectServer.Client.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.DocumentManagement.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Publishing.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Search.Applications.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Search.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.Taxonomy.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.UserProfiles.dll
+D:\DoAnCoSo\DOANCS\AMNHAC\bin\Microsoft.SharePoint.Client.WorkflowServices.dll

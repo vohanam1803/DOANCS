@@ -1,0 +1,22 @@
+﻿@model IEnumerable<AMNHAC.Models.Video>
+
+@foreach (var item in Model)
+{
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id?@item.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <form action="/Discover/VideoPlay" method="post">
+        <input type="text" id="domain" name="Id" value="autoplay=1" style="display:none;" />
+        <input type="text" id="domain1" name="Id1" value="@item.id" style="display:none;" />
+        <button type="submit">Play</button>
+    </form>
+    <form action="/Discover/VideoPlay" method="post">
+        <input type="text" id="domain" name="Id1" value="" style="display:none;" />
+        <input type="text" id="domain1" name="Id1" value="@item.id" style="display:none;" />
+        <button type="submit">Pause</button>
+    </form>
+
+
+}
+
+
+
+

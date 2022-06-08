@@ -7,23 +7,47 @@
 <body>
 
     <h3 class="title" style="text-align:center;"> @ViewBag.Message </h3>
-
+    <h3 class="title" style="text-align:center; color:red;"> @ViewBag.Check</h3>
     <div class="test">
         @foreach (var item in Model)
         {
 
-            <div class="song" >
+            <div class="song">
                 <div class="thumb" style="background-image: url('https://img.youtube.com/vi/@item.id/maxresdefault.jpg') "></div>
                 <div class="body">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    @*<iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
                     <h3 class="title"> @item.title </h3>
-                    <p class="author"> @item.author </p>
+                    <p class="author"> @item.author </p> / <p class="author"> @item.duration </p>
                 </div>
 
                 <div class="option">
-                    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-                    <button onclick="openList(event)" data-id="@item.id">Click me</button>
-                    @*<button class="btn js-buy-ticket s-full-width" >Playlist</button>*@
+
+                    @using Microsoft.AspNet.Identity
+                    @if (Request.IsAuthenticated)
+                    {
+                        <form action="/Home/AddPlaylistAdmin" method="post">
+                            <input type="text" id="domain" name="Id" value="@item.title" style="display:none;" />
+                            <input type="text" id="domainCheckId" name="CheckId" value="@item.id" style="display:none;" />
+                            <select name="theloai" class="form-control">
+                                <option value="">--Chọn Thể Loại--</option>
+                                <option value="hoa">Nhạc Hoa</option>
+                                <option value="viet">Nhạc Việt</option>
+                                @*<option value="khac">Nhạc Khác</option>*@
+                            </select>
+                            <button type="submit" style="color:black;">Add Your Playlist Admin In Index</button>
+                        </form>
+                    }
+
+
+
+
+                    <form action="/Home/Test" method="post">
+                        <input type="text" id="domain" name="Id" value="@item.title" style="display:none;" />
+                        <input type="text" id="domainCheckId" name="CheckId" value="@item.id" style="display:none;" />
+                        <button type="submit">Add Your Playlist</button>
+                    </form>
+                    <button onclick="openList(event)" data-id="@item.id">More</button>
+
 
                 </div>
 
@@ -62,14 +86,15 @@
             </div>
         }
     </div>
+
 </body>
 <script>
 
     function openList(e) {
         var id = e.currentTarget.getAttribute('data-id')
         showBuyTickets(id)
-        
-        
+
+
     }
     function closeList(e) {
         var id = e.currentTarget.getAttribute('data-id')
@@ -80,24 +105,24 @@
         var id = e.currentTarget.getAttribute('id')
         hideBuyTickets(id)
     }
-  
-   
-    
+
+
+
 
     function showBuyTickets(id) {
         const modal = document.getElementById(id)
         modal.classList.add('open')
-        
+
     }
     function hideBuyTickets(id) {
         const modal = document.getElementById(id)
         modal.classList.remove('open')
     }
 
-   
 
-   
-    
+
+
+
 </script>
 
 
