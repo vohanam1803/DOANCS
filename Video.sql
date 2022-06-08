@@ -8,15 +8,4 @@ CREATE TABLE Video(
     vitrivideo NVARCHAR(50),
 	loaivideo NVARCHAR(50),
 );
-CREATE TABLE VideoAdmin(
-	id NVARCHAR(255) PRIMARY KEY NOT NULL,
-    title NVARCHAR(255) NOT NULL,
-    author NVARCHAR(150),
-	link NVARCHAR(255),
-    vitrivideo NVARCHAR(50),
-	loaivideo NVARCHAR(50),
-);
 SELECT * FROM Video
-
-SELECT * FROM Video
-WHERE loaivideo LIKE 'admin%'

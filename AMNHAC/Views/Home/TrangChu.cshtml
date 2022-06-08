@@ -1,77 +1,58 @@
-﻿@using AMNHAC.Models
-@model dynamic
+﻿@model IEnumerable<AMNHAC.Models.Video>
 @{
     ViewBag.Title = "TrangChu";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>TrangChu</h2>
-<form action="/Home/Create" method="post">
+
+<form action="/Home/TrangChu" method="post">
     <span class="icon"><i class="fa fa-search"></i></span>
     <input type="search" name="Id" id="search" placeholder="Search Any Song.." title="Tìm kiếm" style="color:#000" />
 </form>
-<form action="/Home/TrangChu" method="get">
 
-    <input type="submit" title="Về Play List" value="Về Playlist" style="color:#000" />
-</form>
-
-<button class="btn js-buy-ticket s-full-width" onclick="openList(event)" data-id="Show" style="background-color:red;">Show Trang Chủ</button>
-
-<h2>Tìm Kiếm Trong Playlist</h2>
-<form action="/Home/SearchInPlaylist" method="post">
-    <span class="icon"><i class="fa fa-search"></i></span>
-    <input type="search" name="SearchInPlaylist" id="search" placeholder="Search Any Song.." title="Tìm kiếm" style="color:#000" />
-</form>
-
-<h3 class="title" style="text-align:center;color:red;"> @ViewBag.Message </h3>
+@*Nhac Trung*@
 <div class="Artist">
     <section class="Artist-Noidung">
         <header class="Artist-Tieude">
-            <div class="NhacHoa"><a class="nyued0j lmgha8v" style="--lmgha8v-0:#009DC6">Playlist Nhạc </a></div>
+            <div class="NhacHoa"><a class="nyued0j lmgha8v" style="--lmgha8v-0:#009DC6">Nhạc Trung</a></div>
         </header>
         <div class="Nhac-content">
-
+            <div class="Nhac-Tieude">
+                <div class="Nhac-Trung">
+                    <picture class="sbgigcn p18r570z" style="--p18r570z-0:56.25%;--p18r570z-1:100%">
+                        <img src="https://ajteducation.com/images/6_C%E1%BB%90_%C4%90%C3%94_/B%E1%BA%AEC_KINH.jpg" alt="Cho những người thích nghe nhạc Hoa" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
+                    </picture><div class="s18w18cd"><h3 class="tnkt7b2 h1yokpfj">Cho những người thích nghe nhạc Hoa</h3></div>
+                </div>
+                <p>Nền âm nhạc phong phú và phổ biến nhất đến từ Trung Hoa!</p>
+            </div>
             <div class="Nhac-Tieubieu">
-                @foreach (Video video in Model.trangchu)
+                @foreach (var item in Model)
                 {
-                    <div onclick="openList(event)" data-id="@video.id" style="--Nhac-0:#F8F8F8">
+                    <div onclick="openList(event)" data-id="@item.id" style="--Nhac-0:#F8F8F8">
                         <a class="lcourxo l1kpohop">
                             <div class="lydohjg">
                                 <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px">
-                                    <img src="https://img.youtube.com/vi/@video.id/maxresdefault.jpg" alt="@video.title" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
-                                </picture><span class="tge85oa e1lai98">@video.title</span><span class="s5fxhr2 e1lai98">
-                                    @video.author / Loại: @video.Theloai.nameTheloai
+                                    <img src="https://img.youtube.com/vi/@item.id/maxresdefault.jpg" alt="@item.title" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
+                                </picture><span class="tge85oa e1lai98">@item.title</span><span class="s5fxhr2 e1lai98">
+                                    @item.author
                                 </span>
                             </div>
                         </a>
                     </div>
 
-                    @*<form action="/Home/AddPlaylistAdmin" method="post">
-                            <input type="text" id="domain" name="Id" value="@item.title" style="display:none;" />
-                            <input type="text" id="domainCheckId" name="CheckId" value="@item.id" style="display:none;" />
-                            <select name="theloai" class="form-control">
-                                <option value="hoa">Nhạc Hoa</option>
-                                <option value="viet">Nhạc Việt</option>
-                                <option value="khac">Nhạc Khác</option>
-                            </select>
-                            <button type="submit" style="color:black;">Add Your Playlist Admin In Index</button>
-                        </form>*@
-                    <form action="/Home/DetelePlaylistAdmin" method="post">
-                        <input type="text" id="domain" name="Id" value="@video.id" style="display:none;" />
 
-                        <button type="submit" style="color:black;">Detele From Playlist</button>
-                    </form>
 
-                    <div class="modal js-modal" onclick="closeAllList(event)" id="@video.id">
+                    <div class="modal js-modal" onclick="closeAllList(event)" id="@item.id">
                         <div class="modal-container js-modal-container">
-                            <div class="modal-close js-modal-close" onclick="closeList(event)" data-id="@video.id">
+                            <div class="modal-close js-modal-close" onclick="closeList(event)" data-id="@item.id">
                                 <i class="fa fa-times"></i>
                             </div>
 
                             <header class="modal-header">
                                 <div class="Lyrics-form ">
                                     <i class="modal-heading-icon fa fa-info"></i>
-                                    <h1 class="Lyrics-title">@video.title</h1>
+                                    <h1 class="Lyrics-title">@item.title</h1>
                                 </div>
 
                             </header>
@@ -80,9 +61,9 @@
                                 <div class="Lyrics">
                                     <p class="Lyrics-info">
 
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/@video.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <div style="color:black;">
-                                            @video.link
+                                            @item.link
                                         </div>
                                     </p>
 
@@ -101,227 +82,6 @@
         </div>
     </section>
 </div>
-
-
-
-
-<div class="modal js-modal" onclick="closeAllList(event)" id="Show">
-    <div class="modal-container js-modal-container">
-        <div class="modal-close js-modal-close" onclick="closeList(event)" data-id="Show">
-            <i class="fa fa-times"></i>
-        </div>
-
-        <h2 style="color:red;text-align:center">Hiển Thị Trên Trang Chủ</h2>
-        <div class="place-body">
-            <div class="khung">
-                <div class="itxe">
-                    <div class="Artist">
-                        <section class="Artist-Noidung">
-                            <header class="Artist-Tieude">
-                                <div class="NhacHoa"><a class="nyued0j lmgha8v" style="--lmgha8v-0:#009DC6">Nhạc Trung</a></div>
-                            </header>
-                            <div class="Nhac-content">
-                                <div class="Nhac-Tieude">
-                                    <div class="Nhac-Trung">
-                                        <picture class="sbgigcn p18r570z" style="--p18r570z-0:56.25%;--p18r570z-1:100%">
-                                            <img src="https://ajteducation.com/images/6_C%E1%BB%90_%C4%90%C3%94_/B%E1%BA%AEC_KINH.jpg" alt="Cho những người thích nghe nhạc Hoa" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
-                                        </picture><div class="s18w18cd"><h3 class="tnkt7b2 h1yokpfj">Cho những người thích nghe nhạc Hoa</h3></div>
-                                    </div>
-                                    <p>Nền âm nhạc phong phú và phổ biến nhất đến từ Trung Hoa!</p>
-                                </div>
-                                <div class="Nhac-Tieubieu">
-                                    @foreach (Video video in Model.videoTQ)
-                                    {
-                                        <div id="@video.loaivideo" onclick="openList(event)" data-id="@video.id" name="@video.loaivideo" set-videoplay="@video.vitrivideo" style="--Nhac-0:#F8F8F8">
-                                            <a class="lcourxo l1kpohop">
-                                                <div class="lydohjg">
-                                                    <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px">
-                                                        <img src="https://img.youtube.com/vi/@video.id/maxresdefault.jpg" alt="@video.title" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
-                                                    </picture><span class="tge85oa e1lai98">@video.title</span><span class="s5fxhr2 e1lai98">
-                                                        @video.author / @video.Theloai.nameTheloai
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </div>
-
-
-
-                                        <div class="modal js-modal" onclick="closeAllList(event)" id="@video.id">
-                                            <div class="modal-container js-modal-container">
-                                                <div class="modal-close js-modal-close" onclick="closeList(event)" data-id="@video.id">
-                                                    <i class="fa fa-times"></i>
-                                                </div>
-
-                                                <header class="modal-header">
-                                                    <div class="Lyrics-form ">
-                                                        <i class="modal-heading-icon fa fa-info"></i>
-                                                        <h1 class="Lyrics-title">@video.title</h1>
-                                                    </div>
-
-                                                </header>
-
-                                                <div class="modal-body">
-                                                    <div class="Lyrics">
-                                                        <p class="Lyrics-info">
-
-                                                            <iframe id="@video.vitrivideo" width="560" height="315" src="https://www.youtube.com/embed/@video.id?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                            <div style="color:black;">
-                                                                @video.link
-                                                            </div>
-                                                        </p>
-
-                                                    </div>
-                                                </div>
-
-                                                <footer class="modal-footer">
-                                                    <p class="modal-help text-black">Need <a href="">help?</a></p>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    }
-
-
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
-                    @*Nhac Viet*@
-                    <div class="Artist">
-                        <section class="Artist-Noidung">
-                            <header class="Artist-Tieude">
-                                <div class="NhacHoa"><a class="nyued0j lmgha8v" style="--lmgha8v-0:#009DC6">Nhạc Việt</a></div>
-                            </header>
-                            <div class="Nhac-content">
-                                <div class="Nhac-Tieude">
-
-                                    <div class="Nhac-Trung">
-                                        <picture class="sbgigcn p18r570z" style="--p18r570z-0:56.25%;--p18r570z-1:100%">
-                                            <img src="~/Content/images/AnhNhacViet.png" alt="Cho những người thích nghe nhạc Hoa" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
-                                        </picture><div class="s18w18cd"><h3 class="tnkt7b2 h1yokpfj">Cho những người thích nghe nhạc Việt</h3></div>
-                                    </div>
-                                    <p>Nền âm nhạc phong phú và phổ biến nhất đến từ Vpop!</p>
-                                </div>
-
-                                <div class="Nhac-Tieubieu">
-                                    @foreach (Video video in Model.videoVN)
-                                    {
-                                        <div id="@video.loaivideo" onclick="openList(event)" data-id="@video.id" name="@video.loaivideo" set-videoplay="@video.vitrivideo" style="--Nhac-0:#F8F8F8">
-                                            <a class="lcourxo l1kpohop">
-                                                <div class="lydohjg">
-                                                    <picture class="f8d0pxd sbgigcn p18r570z" height="45" style="--p18r570z-0:45px;--p18r570z-1:80px">
-                                                        <img src="https://img.youtube.com/vi/@video.id/maxresdefault.jpg" alt="@video.title" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:0;--i1by9jdf-0:#FFFFFF">
-                                                    </picture><span class="tge85oa e1lai98">@video.title</span><span class="s5fxhr2 e1lai98">
-                                                        @video.author / @video.Theloai.nameTheloai
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </div>
-
-
-
-                                        <div class="modal js-modal" onclick="closeAllList(event)" id="@video.id">
-                                            <div class="modal-container js-modal-container">
-                                                <div class="modal-close js-modal-close" onclick="closeList(event)" data-id="@video.id">
-                                                    <i class="fa fa-times"></i>
-                                                </div>
-
-                                                <header class="modal-header">
-                                                    <div class="Lyrics-form ">
-                                                        <i class="modal-heading-icon fa fa-info"></i>
-                                                        <h1 class="Lyrics-title">@video.title</h1>
-                                                    </div>
-
-                                                </header>
-
-                                                <div class="modal-body">
-                                                    <div class="Lyrics">
-                                                        <p class="Lyrics-info">
-
-                                                            <iframe id="@video.vitrivideo" width="560" height="315" src="https://www.youtube.com/embed/@video.id?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                            <div style="color:black;">
-                                                                @video.link
-                                                            </div>
-                                                        </p>
-
-                                                    </div>
-                                                </div>
-
-                                                <footer class="modal-footer">
-                                                    <p class="modal-help text-black">Need <a href="">help?</a></p>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    }
-
-
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
-                    @*Nghe Si*@
-                    <div class="Artist">
-                        <section class="Artist-Noidung">
-                            <header class="Artist-Tieude"><h2 class="h3w46bu"><a class="l1amswbe" style="--l1amswbe-0:inherit;--l1amswbe-1:none">Artists</a></h2></header>
-                            <div class="Artist-content">
-                                @foreach (Person person in Model.person)
-                                {
-                                    <a class="NgheSi">
-                                        <div class="nghesi" style="--nghesi-0:auto">
-                                            <div class="hinhanh" onclick="openList(event)" data-id="@person.idPerson" style="--hinhanh-0: 100%; --p18r570z-1: 100% ">
-                                                <img src="@person.hinhPerson" alt="Mỹ Tâm" title="@person.namePerson" class="i1by9jdf iwzmvkf" style="--iwzmvkf-0:transparent;--iwzmvkf-1:50%;--i1by9jdf-0:#FFFFFF">
-                                            </div>
-                                            <div class="naphpbz" style="--naphpbz-0:16px;--naphpbz-1:15px">@person.namePerson</div>
-                                        </div>
-                                    </a>
-
-
-                                    <div class="modal js-modal" onclick="closeAllList(event)" id="@person.idPerson">
-                                        <div class="modal-container js-modal-container">
-                                            <div class="modal-close js-modal-close" onclick="closeList(event)" data-id="@person.idPerson">
-                                                <i class="fa fa-times"></i>
-                                            </div>
-
-                                            <header class="modal-header">
-                                                <div class="Lyrics-form ">
-                                                    <i class="modal-heading-icon fa fa-info"></i>
-                                                    <h1 class="Lyrics-title">@person.namePerson</h1>
-                                                </div>
-
-                                            </header>
-
-                                            <div class="modal-body">
-                                                <div class="Lyrics">
-                                                    <p class="Lyrics-info">
-
-                                                        @person.Mota
-
-                                                    </p>
-
-                                                </div>
-                                            </div>
-
-                                            <footer class="modal-footer">
-                                                <p class="modal-help text-black">Need <a href="">help?</a></p>
-                                            </footer>
-                                        </div>
-                                    </div>
-                                }
-
-
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-
 
 <script>
     function openList(e) {
@@ -355,4 +115,3 @@
 
 
 </script>
-
