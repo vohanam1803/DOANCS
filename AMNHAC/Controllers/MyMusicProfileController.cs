@@ -35,15 +35,17 @@ namespace AMNHAC.Controllers
         public ActionResult Index()
         {
             var videoProfile = data.Videos.ToList();
+            var check = from ss in data.Videos where ss.loaivideo == "user" select ss;
+
             if (videoProfile.Count == 0)
             {
                 ViewBag.Message = "You Not Have Anything In Playlist";
-                return View(videoProfile);
+                return View(check);
             }
             else
             {
                 ViewBag.Message = "Your Playlist";
-                return View(videoProfile);
+                return View(check);
             }
         }
         public ActionResult DetelePlaylist(string id)

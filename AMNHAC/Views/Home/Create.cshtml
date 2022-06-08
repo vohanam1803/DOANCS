@@ -17,10 +17,28 @@
                 <div class="body">
                     @*<iframe width="560" height="315" src="https://www.youtube.com/embed/@item.id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
                     <h3 class="title"> @item.title </h3>
-                    <p class="author"> @item.author </p>
+                    <p class="author"> @item.author </p> / <p class="author"> @item.duration </p>
                 </div>
 
                 <div class="option">
+
+                    @using Microsoft.AspNet.Identity
+                    @if (Request.IsAuthenticated)
+                    {
+                        <form action="/Home/AddPlaylistAdmin" method="post">
+                            <input type="text" id="domain" name="Id" value="@item.title" style="display:none;" />
+                            <input type="text" id="domainCheckId" name="CheckId" value="@item.id" style="display:none;" />
+                            <select name="theloai" class="form-control">
+                                <option value="">--Chọn Thể Loại--</option>
+                                <option value="hoa">Nhạc Hoa</option>
+                                <option value="viet">Nhạc Việt</option>
+                                @*<option value="khac">Nhạc Khác</option>*@
+                            </select>
+                            <button type="submit" style="color:black;">Add Your Playlist Admin In Index</button>
+                        </form>
+                    }
+
+
 
 
                     <form action="/Home/Test" method="post">
@@ -101,7 +119,7 @@
         modal.classList.remove('open')
     }
 
-    
+
 
 
 
