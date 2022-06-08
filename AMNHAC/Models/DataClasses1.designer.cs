@@ -1040,6 +1040,8 @@ namespace AMNHAC.Models
 		
 		private System.Nullable<int> _idTheloai;
 		
+		private string _duration;
+		
 		private EntityRef<Theloai> _Theloai;
 		
     #region Extensibility Method Definitions
@@ -1060,6 +1062,8 @@ namespace AMNHAC.Models
     partial void OnloaivideoChanged();
     partial void OnidTheloaiChanging(System.Nullable<int> value);
     partial void OnidTheloaiChanged();
+    partial void OndurationChanging(string value);
+    partial void OndurationChanged();
     #endregion
 		
 		public Video()
@@ -1208,6 +1212,26 @@ namespace AMNHAC.Models
 					this._idTheloai = value;
 					this.SendPropertyChanged("idTheloai");
 					this.OnidTheloaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_duration", DbType="NVarChar(255)")]
+		public string duration
+		{
+			get
+			{
+				return this._duration;
+			}
+			set
+			{
+				if ((this._duration != value))
+				{
+					this.OndurationChanging(value);
+					this.SendPropertyChanging();
+					this._duration = value;
+					this.SendPropertyChanged("duration");
+					this.OndurationChanged();
 				}
 			}
 		}

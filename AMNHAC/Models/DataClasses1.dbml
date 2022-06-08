@@ -59,6 +59,7 @@
       <Column Name="vitrivideo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="loaivideo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="idTheloai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="duration" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="Theloai_Video" Member="Theloai" ThisKey="idTheloai" OtherKey="idTheloai" Type="Theloai" IsForeignKey="true" />
     </Type>
   </Table>

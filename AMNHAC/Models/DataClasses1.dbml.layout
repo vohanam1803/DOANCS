@@ -39,17 +39,17 @@
         <elementListCompartment Id="5241ee60-7214-478f-a55b-0620212134e8" absoluteBounds="0.51499999999999968, 3.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="d3bf1af7-660a-4633-abc3-7d8b78b47b86" absoluteBounds="3.875, 3.25, 2, 2.1554996744791666">
+    <classShape Id="8ad09608-67b4-49a9-892c-afff29ab722e" absoluteBounds="4.75, 4.375, 2, 2.3478011067708335">
       <DataClassMoniker Name="/DataClasses1DataContext/Video" />
       <nestedChildShapes>
-        <elementListCompartment Id="94887895-7c51-4cf0-8fe0-b237a5949bee" absoluteBounds="3.89, 3.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9f1b41b7-d5ce-48bd-b0b7-eee806a8ed7d" absoluteBounds="4.765, 4.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 1.42674638476563); (2.875 : 1.42674638476563); (2.875 : 3.14589680989583); (4.875 : 3.14589680989583); (4.875 : 3.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 1.42674638476563); (2.875 : 1.42674638476563); (2.875 : 3.14589680989583); (5.7499995 : 3.14589680989583); (5.7499995 : 4.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClasses1DataContext/Theloai/Theloai_Video" />
       <nodes>
         <classShapeMoniker Id="79df3849-a37c-4e08-8206-44195808d8c2" />
-        <classShapeMoniker Id="d3bf1af7-660a-4633-abc3-7d8b78b47b86" />
+        <classShapeMoniker Id="8ad09608-67b4-49a9-892c-afff29ab722e" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
